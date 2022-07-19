@@ -98,6 +98,9 @@
 - [프로그래머스 - 전화번호 목록](javaspace/Solution5.java)
 - [BOJ - 2480 주사위세개](javaspace/Solution6.java)
 - [BOJ - 2484 주사위네개](javaspace/Solution7.java)
+- [BOJ - 2484 주사위네개](javaspace/Solution7.java)
+
+### 📌 Python
 - [프로그래머스 - 전화번호 목록](pythonspace/Solution1.ipynb)
 - [프로그래머스 - 카펫](pythonspace/Solution13.ipynb)
 - [BOJ - 2480 주사위세개](pythonspace/Solution2.ipynb)
