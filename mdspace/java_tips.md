@@ -474,6 +474,10 @@ System.out.println(str.endsWith("h")); // false
 // 같은 문자열인지 true or false
 System.out.println(str.substring(0, 2).equals("hi")); // true
 
+// 문자열 포함 여부
+System.out.println(str.contains("h")); // true
+System.out.println(str.indexOf("h")); // 0 (해당 문자열 존재하면 index return, 없으면 -1 returnß)
+
 // 특정 문자열의 idx 리턴
 System.out.println(str.indexOf("h")); // 0
 
