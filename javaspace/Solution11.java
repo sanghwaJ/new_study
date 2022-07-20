@@ -6,7 +6,6 @@ public class Solution11 {
         int X = 5;
         int[] A = {1,3,1,4,2,3,2,5,4};
         
-
         System.out.println(solution(X, A));
     }
 
