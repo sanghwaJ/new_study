@@ -142,8 +142,16 @@ String[] copyArray = Arrays.copyOfRange(array, 시작 idx, 끝 idx+1);
 Arrays.asList(array);
 
 // List to Array
-//String[] array = list.toArray(new String[list.size()]);
-int[] array = new int[list.size()];
+import java.util.*;
+import java.util.stream.Collectors;
+
+int[] array = list.stream().mapToInt(i->i).toArray();
+
+// Array to List
+import java.util.*;
+import java.util.stream.Collectors;
+
+List<Integer> list = Arrays.stream(array).boxed().collect(Collectors.toList());
 ```
 
 ## 3) ArrayList
