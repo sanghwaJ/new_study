@@ -76,6 +76,7 @@
 - [Java - Excel Download (Apache POI)](mdspace/java_excel.md)
 - [Java - 배열(Array)](mdspace/java_array.md) 
 - [Java - Queue & Stack](mdspace/java_queueAndStack.md)
+- [Java - Lambda](mdspace/java_lambda.md)
 
 ### 📌 JavaScript & HTML
 - [JavaScript - return](mdspace/js_return.md)
