@@ -1,6 +1,6 @@
 import java.util.*;
 
-// Codility - FrogRiverOne => 수정필요
+// Codility - FrogRiverOne 
 public class Solution11 {
     public static void main(String[] args) {
         int X = 5;
@@ -15,10 +15,12 @@ public class Solution11 {
 
         HashSet<Integer> set = new HashSet<>();
         for (int i=0; i<A.length; i++) {
-            set.add(A[i]);
-            if (set.size() == X && A[i] == X) {
-                answer = i;
-                return answer;
+            if (A[i] <= X) {
+                set.add(A[i]);
+                if (set.size() == X) {
+                    answer = i;
+                    return answer;
+                }
             }
         }
         return answer;

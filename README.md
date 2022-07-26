@@ -104,6 +104,8 @@
 - [Codility - BinaryGap](javaspace/Solution8.java)
 - [Codility - CyclicRotation](javaspace/Solution9.java)
 - [Codility - FrogJmp](javaspace/Solution10.java)
+- [Codility - FrogRiverOne](javaspace/Solution11.java)
+- [Codility - PermCheck](javaspace/Solution12.java)
 
 ### 📌 Python
 - [프로그래머스 - 전화번호 목록](pythonspace/Solution1.ipynb)
