@@ -106,6 +106,10 @@
 - [Codility - FrogJmp](javaspace/Solution10.java)
 - [Codility - FrogRiverOne](javaspace/Solution11.java)
 - [Codility - PermCheck](javaspace/Solution12.java)
+- [Codility - PassingCars](javaspace/Solution13.java)
+- [Codility - Distinct](javaspace/Solution14.java)
+- [Codility - MaxProductOfThree](javaspace/Solution15.java)
+- [Codility - Triangle](javaspace/Solution16.java)
 
 ### 📌 Python
 - [프로그래머스 - 전화번호 목록](pythonspace/Solution1.ipynb)

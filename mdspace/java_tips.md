@@ -110,9 +110,26 @@ for(int i = 0; i < array.length; i++) {
 	System.out.println(Arrays.toString(array[i]));
 }
 
-// 1차원 Array 정렬
-Arrays.sort(array); // 오름차순
-Arrays.sort(array, Collections.reverseOrder()); // 내림차순
+// 1차원 String Array 정렬
+String[] strArr = {'c', 'b', 'a'};
+// 오름차순
+Arrays.sort(strArr);
+// 내림차순
+Arrays.sort(strArr, Collections.reverseOrder());
+
+// 1차원 Int Array 정렬
+// 오름차순
+int[] intArr = {3,5,1,2,4};
+Arrays.sort(intArr); 
+// 내림차순 (int -> integer로 변환해주어야 함)
+Integer[] integerArr = Arrays.stream(intArr).boxed().toArray(Integer[]::new);
+Arrays.sort(integerArr, Collections.reverseOrder());
+// 참고 : interger array -> int array
+int[] intArr = Arrays.stream(integerArr).mapToInt(Integer::intValue).toArray(); 
+
+// 정렬 시작 위치와 끝 위치 지정하여 정렬하기
+Arrays.sort(arr, 1, 3);
+Arrays.sort(arr, 1, 3, Collections.reverseOrder());
 
 // 2차원 Array 정렬
 Arrays.sort(tickets, new Comparator<String[]>() {
