@@ -518,6 +518,12 @@ for(int i = strArray.length-1; i >= 0; i--) {
 	reverseStr += strArray[i];
 }
 System.out.println(reverseStr);
+
+// 문자열 각 요소 빠른 접근 방법
+String S = "abcdefgh";
+for (char c : S.toCharArray()) {
+    System.out.println(c);
+}
 ```
 
 ## 12) LinkedList - 데이터의 추가/삭제가 많은 경우 사용
@@ -588,6 +594,8 @@ while(!q.isEmpty()) {
 	// Queue pop
 	System.out.println(q.poll()); // 0 -> 1 -> 2
 }
+
+// .size() : Stack이나 Queue의 사이즈 반환
 ```
 <p align="center"><img src="../imagespace/javatips1.jpg"></p>
 <p align="center"><img src="../imagespace/javatips2.jpg"></p>
@@ -847,4 +855,25 @@ System.out.println(sbb.capacity()); //용량 크기
 System.out.println(sbb.reverse()); //문자열 뒤집기
 System.out.println(sbb); //마지막상태
 sbb.setLength(0); // 초기화
+```
+
+## 19) 삼항연산자
+- 3개의 피연산자를 필요로 하는 연산자로, 단순한 if-else 구문인 경우 true/false를 판단하여 결과 값이나 원하는 연산 수행
+- 기존 if-else 구문보다 코드 생산성을 높여주나, 성능 면에서는 영향은 없음
+
+<p align="center"><img src="../imagespace/javatips6.png" height=200></p>
+
+```java
+// 기존 if-else 문
+int A = 0;
+if (1 > 3) {
+    A = 10;
+} else {
+    A = 30;
+}
+System.out.println(A); // 30
+
+// 3항연산자
+int B = (1 > 3) ? 10 : 30
+System.out.println(B); // 30
 ```
