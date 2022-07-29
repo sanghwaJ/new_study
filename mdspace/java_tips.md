@@ -596,7 +596,9 @@ while(!q.isEmpty()) {
 }
 
 // .size() : Stack이나 Queue의 사이즈 반환
+// .peek() : pop할 대상을 pop하지 않고 조회만 함
 ```
+
 <p align="center"><img src="../imagespace/javatips1.jpg"></p>
 <p align="center"><img src="../imagespace/javatips2.jpg"></p>
 
