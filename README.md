@@ -111,6 +111,7 @@
 - [Codility - MaxProductOfThree](javaspace/Solution15.java)
 - [Codility - Triangle](javaspace/Solution16.java)
 - [Codility - Brackets](javaspace/Solution17.java)
+- [Codility - Fish](javaspace/Solution18.java)
 
 ### 📌 Python
 - [프로그래머스 - 전화번호 목록](pythonspace/Solution1.ipynb)
