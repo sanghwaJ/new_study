@@ -724,7 +724,6 @@ class Main {
         };
 
         bfs(0, 0, array, visit);
-
     } 
 
     public static void bfs(int x, int y, String[][] array, boolean[][] visit) {
