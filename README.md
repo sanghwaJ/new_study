@@ -15,7 +15,6 @@
 - [Java - DTO & VO](mdspace/java_dtoAndVo.md)
 - [Java - Getter & Setter](mdspace/java_getterAndSetter.md)
 - [Java - Spring Container & Spring Bean](mdspace/java_springContainerBean.md)
-- [Java - JPA](mdspace/java_jpa.md)
 - [Java - URL Connection & Http URL Connection](mdspace/java_urlConnection.md)
 - [Java - HttpServletRequest & HttpServletResponse](mdspace/java_httpServlet.md)
 
@@ -59,6 +58,7 @@
   
 ### 📌 Database
 - [Query 최적화](mdspace/query.md)
+- [JPA](mdspace/jpa.md)
 
 ---
 
