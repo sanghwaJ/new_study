@@ -114,6 +114,7 @@
 - [Codility - Brackets](javaspace/Solution17.java)
 - [Codility - Fish](javaspace/Solution18.java)
 - [Codility - Dominator](javaspace/Solution19.java)
+- [Codility - MaxProfit](javaspace/Solution20.java)
 
 ### 📌 Python
 - [프로그래머스 - 전화번호 목록](pythonspace/Solution1.ipynb)
