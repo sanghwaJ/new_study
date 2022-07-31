@@ -163,7 +163,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 int[] array = list.stream().mapToInt(i->i).toArray();
-
+ 
 // Array to List
 import java.util.*;
 import java.util.stream.Collectors;
@@ -524,6 +524,10 @@ String S = "abcdefgh";
 for (char c : S.toCharArray()) {
     System.out.println(c);
 }
+
+// 문자열 반복 (Java11 이상에서 사용 가능)
+String S = "0".repeat(10);
+System.out.println(S); // 0000000000
 ```
 
 ## 12) LinkedList - 데이터의 추가/삭제가 많은 경우 사용
