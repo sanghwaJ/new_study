@@ -51,14 +51,14 @@
 
 ### 2-5. REPEATABLE READ
 
-<p align="center"><img src="../imagespace/transaction4.png" height=550></p>
+<p align="center"><img src="../imagespace/transaction4.png" height=600></p>
 
-- MySQL InnoDB 스토리지 엔진에서 기본적으로 사용하는 격리 수준으로, READ COMMITTED에서 발생하는 NON-REPEATABLE 문제가 발생하지 앟음
+- MySQL InnoDB 스토리지 엔진에서 기본적으로 사용하는 격리 수준으로, READ COMMITTED에서 발생하는 NON-REPEATABLE 문제가 발생하지 않음
 - REPEATABLE READ는 UNDO 영역에 백업된 이전 데이터를 통해 동일한 트랜잭션 내에서는 동일한 결과를 보여주기 때문
 - 서로 다른 세션이 동일한 데이터에 접근했을 때, 각 세션마다 스냅샷 이미지를 보장해주는 MVCC 기술로 인해 잠금을 사용하지 않는 일관된 읽기를 제공
 - PHANTOM READ 문제
 
-<p align="center"><img src="../imagespace/transaction6.png" height=550></p>
+<p align="center"><img src="../imagespace/transaction6.png" height=600></p>
 
 - 위와 같이 다른 트랜잭션에서 수행한 변경 작업에 의해 데이터가 보였다가 안보였다가 하는 현상을 뜻함
 - MySQL InnoDB는 MVCC 다중 버전 제어로 PHANTOM READ 문제를 해결하고 있기 때문에 MySQL에서는 REPEATABLE READ 격리 수준을 주로 사용함
