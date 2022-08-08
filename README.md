@@ -47,7 +47,7 @@
 - [Elasticsearch](mdspace/elasticsearch.md)
 - [Git Branch 전략](mdspace/gitBranch.md)
 - [Kafka](mdspace/kafka.md)
-
+- [교착상태 (Dead Lock)](mdspace/deadlock.md)
 ---
 
 ## 🗄 Infra
@@ -59,6 +59,7 @@
 ### 📌 Database
 - [Query 최적화](mdspace/query.md)
 - [JPA](mdspace/jpa.md)
+- [트랜잭션 격리 수준 (Transaction Isolation Level)](mdspace/transaction.md)
 
 ---
 

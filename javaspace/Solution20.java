@@ -6,6 +6,7 @@ public class Solution20 {
         int[] A = {23171,21011,21123,21366,21013,21367};
         
         System.out.println(solution(A));
+
     }
 
     public static int solution(int[] A) {
