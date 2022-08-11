@@ -3,7 +3,7 @@ import java.util.*;
 // Codility - Dominator
 public class Solution21 {
     public static void main(String[] args) {
-        int[] A = {23171,21011,21123,21366,21013,21367};
+        //int[] A = {23171,21011,21123,21366,21013,21367};
         
         System.out.println(solution(A));
     }
