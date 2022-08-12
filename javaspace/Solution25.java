@@ -1,36 +1,27 @@
 import java.util.*;
 import java.lang.Math;
 
-// Codility - 
+// Codility - TieRopes
 public class Solution25 {
     public static void main(String[] args) {
-        int N = 36;
+        int[] A = {1,1,3,4,1,2,3};
+        int K = 4;
         
-        System.out.println(solution(N));
+        System.out.println(solution(A, K));
     }
 
-    public static int solution(int N) {
+    public static int solution(int[] A, int K) {
         // write your code in Java SE 11
-        if (N == 1) {
-            return 4;
+        int ropes = 0;
+        int cnt = 0;
+
+        for (int i=0;i<A.length; i++) {
+            ropes += A[i];
+            if (ropes >= K) {
+                cnt++;
+                ropes = 0;
+            } 
         }
-
-        int answer = N + 1;
-        int i = 1;
-
-        while (i * i < N) {
-            if (N % i == 0) {
-                answer = Math.min(answer, i+(N/i));
-            }
-            i++;
-        }
-
-        if (i * i == N) {
-            answer = Math.min(answer, i+(N/i));
-        }
-
-        answer = answer * 2;
-
-        return answer;
+        return cnt;
     }
 }
