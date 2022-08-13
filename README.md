@@ -140,5 +140,6 @@
 - [Softeer - 비밀메뉴](pythonspace/Solution11.ipynb)
 - [Codility - OddOccurrencesInArray](pythonspace/Solution14.ipynb)
 - [Codility - PermMissingElem](pythonspace/Solution15.ipynb)
+- [Codility - TapeEquilibrium](pythonspace/Solution16.ipynb)
 
 ---
