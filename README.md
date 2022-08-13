@@ -97,14 +97,14 @@
 ## 👨‍💻 Algorithm
 
 ### 📌 Java
-- [BOJ - 1541 잃어버린 괄호](javaspace/Solution1.java)
 - [프로그래머스 - 네트워크](javaspace/Solution2.java)
 - [프로그래머스 - 타겟넘버](javaspace/Solution3.java)
 - [프로그래머스 - 위장](javaspace/Solution4.java)
 - [프로그래머스 - 전화번호 목록](javaspace/Solution5.java)
+- [BOJ - 1541 잃어버린 괄호](javaspace/Solution1.java)
 - [BOJ - 2480 주사위세개](javaspace/Solution6.java)
 - [BOJ - 2484 주사위네개](javaspace/Solution7.java)
-- [Codility - naverTest1](javaspace/Solution26.java)
+- [Codility - nTest1](javaspace/Solution26.java)
 - [Codility - BinaryGap](javaspace/Solution8.java)
 - [Codility - CyclicRotation](javaspace/Solution9.java)
 - [Codility - FrogJmp](javaspace/Solution10.java)
@@ -138,5 +138,7 @@
 - [Softeer - 8단 변속기](pythonspace/Solution9.ipynb)
 - [Softeer - 장애물 인식 프로그램](pythonspace/Solution10.ipynb)
 - [Softeer - 비밀메뉴](pythonspace/Solution11.ipynb)
+- [Codility - OddOccurrencesInArray](pythonspace/Solution14.ipynb)
+- [Codility - PermMissingElem](pythonspace/Solution15.ipynb)
 
 ---

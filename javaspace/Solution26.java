@@ -1,10 +1,11 @@
 import java.util.*;
 import java.lang.Math;
 
-// Codility - naverTest1
+// Codility - nTest1
 public class Solution26 {
     public static void main(String[] args) {
-        int[] A = {51,71,17,42};
+        int[] A = {5112,7311,1427,4112,2141,2151};
+        //int[] A = {51,71,17,42};
         //int[] A = {42,33,60};
         //int[] A = {51,32,43};
         System.out.println(solution(A));        
