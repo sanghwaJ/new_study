@@ -59,8 +59,8 @@
   
 ### 📌 Database
 - [Query 최적화](mdspace/query.md)
-- [JPA](mdspace/jpa.md)
 - [트랜잭션 격리 수준 (Transaction Isolation Level)](mdspace/transaction.md)
+- [JPA](mdspace/jpa.md)
 
 ---
 
