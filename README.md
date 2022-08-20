@@ -12,11 +12,12 @@
 - [Java - Overloading & Overriding](mdspace/java_overloadingAndOverriding.md)
 - [Java - Garbage Collection](mdspace/java_gc.md)
 - [Java - 싱글톤 패턴](mdspace/java_singleton.md)
-- [Java - DTO & VO](mdspace/java_dtoAndVo.md)
 - [Java - Getter & Setter](mdspace/java_getterAndSetter.md)
-- [Java - Spring Container & Spring Bean](mdspace/java_springContainerBean.md)
 - [Java - URL Connection & Http URL Connection](mdspace/java_urlConnection.md)
 - [Java - HttpServletRequest & HttpServletResponse](mdspace/java_httpServlet.md)
+- [Java & Spring - DTO & VO](mdspace/java_dtoAndVo.md)
+- [Java & Spring - Spring Container & Spring Bean](mdspace/java_springContainerBean.md)
+- [Java & Spring - IOC, DI, DL, AOP](mdspace/java_springIocDiDlAop.md)
 
 ### 📌 JavaScript & HTML
 - [JavaScript - 실행 모델 (Event Loop, Call Stack, Run-to-completion, Callback Queue, Offloading)](mdspace/js_basic1.md)

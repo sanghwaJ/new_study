@@ -1,4 +1,4 @@
-# Java - DTO & VO
+# Java & Spring - DTO & VO
 
 ## 1. DTO
 
