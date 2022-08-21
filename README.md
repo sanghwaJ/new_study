@@ -33,9 +33,9 @@
 - [Java - Stream](mdspace/java_stream.md)
 
 ### 📌 Spring
-- [Spring - DTO & VO](mdspace/java_dtoAndVo.md)
-- [Spring - Spring Container & Spring Bean](mdspace/java_springContainerBean.md)
 - [Spring - IOC, DI, DL, AOP](mdspace/java_springIocDiDlAop.md)
+- [Spring - Spring Container & Spring Bean](mdspace/java_springContainerBean.md)
+- [Spring - DTO & VO](mdspace/java_dtoAndVo.md)
 
 ### 📌 Web
 - [GET & POST, RESTful API](mdspace/restapiAndGetPost.md)
