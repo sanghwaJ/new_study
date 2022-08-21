@@ -17,7 +17,7 @@
 <p align="center"><img src="../imagespace/java_capsule.jpg"></p>
 
 - public : package, class 상관 없이 모든 접근이 가능
-- protected : 같은 package에서만 접근은 허용하고, 다른 package는 class간 상속 관계인 경우에만 접근이 가능
+- protected : 같은 package에서만 접근을 허용하고, 다른 package는 class간 상속 관계인 경우에만 접근이 가능
 - default : 동일 package에서만 접근을 허용하며, 접근제한자가 생략되어 있는 경우, 기본적으로 default가 적용됨
 - private : 같은 package 이더라도 접근이 불가하며, 오직 같은 class 내에서만 접근이 가능
 
