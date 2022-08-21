@@ -2,29 +2,60 @@
 
 ## 📚 Computer Science
 
-### 📌 Java
-- [Java - JVM(Java Virtual Machine) & Java 컴파일](mdspace/java_jvm.md)
-- [Java - Casting(업캐스팅, 다운캐스팅)](mdspace/java_casting.md)
-- [Java - Call by Value & Call by Reference](mdspace/java_call.md)
-- [Java - 상속](mdspace/java_inheritance.md)
+### 📌 Java 개념
 - [Java - 추상화(Abstraction)와 다형성(Polymorphism)](mdspace/java_AbstractionAndPolymorphism.md)
+- [Java - 상속](mdspace/java_inheritance.md)
 - [Java - 캡슐화와 접근제한자](mdspace/java_capsule.md)
 - [Java - Overloading & Overriding](mdspace/java_overloadingAndOverriding.md)
+- [Java - JVM(Java Virtual Machine) & Java 컴파일](mdspace/java_jvm.md)
 - [Java - Garbage Collection](mdspace/java_gc.md)
 - [Java - 싱글톤 패턴](mdspace/java_singleton.md)
+- [Java - Casting(업캐스팅, 다운캐스팅)](mdspace/java_casting.md)
+- [Java - Static & Instance](mdspace/java_staticAndInstance.md)
+- [Java - Call by Value & Call by Reference](mdspace/java_call.md)
 - [Java - Getter & Setter](mdspace/java_getterAndSetter.md)
+- [Java - Excel Download (Apache POI)](mdspace/java_excel.md)
 - [Java - URL Connection & Http URL Connection](mdspace/java_urlConnection.md)
 - [Java - HttpServletRequest & HttpServletResponse](mdspace/java_httpServlet.md)
-- [Java & Spring - DTO & VO](mdspace/java_dtoAndVo.md)
-- [Java & Spring - Spring Container & Spring Bean](mdspace/java_springContainerBean.md)
-- [Java & Spring - IOC, DI, DL, AOP](mdspace/java_springIocDiDlAop.md)
+
+### 📌 Java 문법
+- [Java Tips](mdspace/java_tips.md)
+- [Java - 메소드의 구분](mdspace/java_method.md)
+- [Java - Map (HashMap, TreeMap, LinkedHashMap)](mdspace/java_map.md)
+- [Java - 예외처리 (throw / try / catch / finally)](mdspace/java_exception.md)
+- [Java - 흐름 제어문 (Break & Continue & Return)](mdspace/java_breakContinueReturn.md)
+- [Java - this](mdspace/java_this.md)
+- [Java - String & StringBuffer & StringBuilder](mdspace/java_string,sbf,sbd.md)
+- [Java - split() & StringTokenizer](mdspace/java_splitAndStringTokenizer.md)
+- [Java - 정규표현식 (Pattern & Matcher)](mdspace/java_regex.md)
+- [Java - Lambda](mdspace/java_lambda.md)
+- [Java - JSON](mdspace/java_json.md)
+
+### 📌 Spring
+- [Spring - DTO & VO](mdspace/java_dtoAndVo.md)
+- [Spring - Spring Container & Spring Bean](mdspace/java_springContainerBean.md)
+- [Spring - IOC, DI, DL, AOP](mdspace/java_springIocDiDlAop.md)
+
+### 📌 Web
+- [GET & POST, RESTful API](mdspace/restapiAndGetPost.md)
+- [Cookie & Session (+ Cache)](mdspace/cookieAndSession.md)
+- [WebSocket](mdspace/websocket.md)
 
 ### 📌 JavaScript & HTML
 - [JavaScript - 실행 모델 (Event Loop, Call Stack, Run-to-completion, Callback Queue, Offloading)](mdspace/js_basic1.md)
 - [JavaScript - Hoisting, Scope, Closure](mdspace/js_basic2.md)
 - [JavaScript - Prototype, Class](mdspace/js_basic3.md)
+- [JavaScript - return](mdspace/js_return.md)
+- [HTML - 이벤트 Tag](mdspace/html_event.md)
 
 ### 📌 Python
+- [Python Tips](mdspace/python_tips.md)
+
+### 📌 Swift
+
+### 📌 Data Structure
+- [Java - 배열(Array)](mdspace/java_array.md) 
+- [Java - Queue & Stack](mdspace/java_queueAndStack.md)
 
 ### 📌 Algorithm
 - [재귀용법 (Recursive Call)](mdspace/algo_recursive.md)
@@ -42,14 +73,12 @@
 - [프로그래밍 언어 별 특징 (C, C++, Java, Python)](mdspace/languages.md)
 - [프로그램, 프로세스, 스레드(멀티스레드, 싱글스레드)](mdspace/program,process,thread.md)
 - [라이브러리, 프레임워크, 아키텍처, API](mdspace/libraryAndFrameworkAndEtc.md)
-- [MSA (Micro Service Architecture)](mdspace/msa.md)
-- [GET & POST, RESTful API](mdspace/restapiAndGetPost.md)
-- [Cookie & Session (+ Cache)](mdspace/cookieAndSession.md)
-- [WebSocket](mdspace/websocket.md)
-- [Elasticsearch](mdspace/elasticsearch.md)
 - [Git Branch 전략](mdspace/gitBranch.md)
-- [Kafka](mdspace/kafka.md)
 - [교착상태 (Dead Lock)](mdspace/deadlock.md)
+- [MSA (Micro Service Architecture)](mdspace/msa.md)
+- [Elasticsearch](mdspace/elasticsearch.md)
+- [Kafka](mdspace/kafka.md)
+
 ---
 
 ## 🗄 Infra
@@ -62,40 +91,10 @@
 - [Query 최적화](mdspace/query.md)
 - [트랜잭션 격리 수준 (Transaction Isolation Level)](mdspace/transaction.md)
 - [JPA](mdspace/jpa.md)
-
----
-
-## 💻 Language
-
-### 📌 Java
-- [Java Tips](mdspace/java_tips.md)
-- [Java - Static & Instance](mdspace/java_staticAndInstance.md)
-- [Java - 메소드의 구분](mdspace/java_method.md)
-- [Java - Map (HashMap, TreeMap, LinkedHashMap)](mdspace/java_map.md)
-- [Java - 예외처리 (throw / try / catch / finally)](mdspace/java_exception.md)
-- [Java - 흐름 제어문 (Break & Continue & Return)](mdspace/java_breakContinueReturn.md)
-- [Java - this](mdspace/java_this.md)
-- [Java - String & StringBuffer & StringBuilder](mdspace/java_string,sbf,sbd.md)
-- [Java - split() & StringTokenizer](mdspace/java_splitAndStringTokenizer.md)
-- [Java - 정규표현식 (Pattern & Matcher)](mdspace/java_regex.md)
-- [Java - Excel Download (Apache POI)](mdspace/java_excel.md)
-- [Java - Lambda](mdspace/java_lambda.md)
-- [Java - JSON](mdspace/java_json.md)
-- [Java - 배열(Array)](mdspace/java_array.md) 
-- [Java - Queue & Stack](mdspace/java_queueAndStack.md)
-  
-### 📌 JavaScript & HTML
-- [JavaScript - return](mdspace/js_return.md)
-- [HTML - 이벤트 Tag](mdspace/html_event.md)
-
-### 📌 Python
-- [Python Tips](mdspace/python_tips.md)
-
-### 📌 Swift
   
 ---
 
-## 👨‍💻 Algorithm
+## 👨‍💻 Practice
 
 ### 📌 Java
 - [프로그래머스 - 네트워크](javaspace/Solution2.java)
