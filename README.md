@@ -30,7 +30,7 @@
 - [Java - 정규표현식 (Pattern & Matcher)](mdspace/java_regex.md)
 - [Java - JSON](mdspace/java_json.md)
 - [Java - Lambda](mdspace/java_lambda.md)
-- [Java - Stream](mdspace/java_Stream.md)
+- [Java - Stream](mdspace/java_stream.md)
 
 ### 📌 Spring
 - [Spring - DTO & VO](mdspace/java_dtoAndVo.md)

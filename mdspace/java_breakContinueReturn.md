@@ -6,7 +6,7 @@
 
 ## 2. Break
 
-- for, while, do~while 등 반복 Loop나 switch~case를 빠져 나올 때 사용
+- for, while, \do~while 등 반복 Loop나 \switch~case를 빠져 나올 때 사용
 - 가장 가까이있는 하나의 반복문을 빠져나오기 위해 사용
 
 ## 3. Continue
