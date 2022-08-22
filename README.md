@@ -108,7 +108,6 @@
 - [BOJ - 1541 잃어버린 괄호](javaspace/Solution1.java)
 - [BOJ - 2480 주사위세개](javaspace/Solution6.java)
 - [BOJ - 2484 주사위네개](javaspace/Solution7.java)
-- [Codility - nTest1](javaspace/Solution26.java)
 - [Codility - BinaryGap](javaspace/Solution8.java)
 - [Codility - CyclicRotation](javaspace/Solution9.java)
 - [Codility - FrogJmp](javaspace/Solution10.java)
