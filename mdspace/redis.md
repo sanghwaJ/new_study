@@ -59,3 +59,14 @@
 <p align="center"><img src="../imagespace/redis3.jpg" height=400></p>
 
 - Redis는 key-value 쌍 뿐 만 아니라 다양한 데이터 구조체를 지원함
+
+### 3-4. Redis VS MemCached
+||Redis|MemCached|
+|---|---|---|
+|쓰레드|싱글 쓰레드|멀티 쓰레드|
+|데이터 구조|list, string, hashes 등 다양한 자료구조 지원|string과 integer만 지원|
+|데이터 저장|Memory, Disk|Memory Only|
+|처리 속도|MemCached보단 느리지만 큰 차이는 없음|디스크를 거치지 않아 Redis보다 더 빠름|
+|Replication|지원|지원 안함|
+|Partitioning Method|지원|지원 안함|
+|영속성|영속성 있는 데이터 사용|지원 안함|
