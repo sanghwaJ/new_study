@@ -10,7 +10,7 @@
 
 <p align="center"><img src="../imagespace/buffer2.jpg"></p>
 
-- Stream은 단반향이기 때문에, 입력과 출력이 동시에 발생할 수 없어 용도에 따라 입력 Stream과 출력 Stream으로 나뉨
+- Stream은 단방향이기 때문에, 입력과 출력이 동시에 발생할 수 없어 용도에 따라 입력 Stream과 출력 Stream으로 나뉨
 
 ### 1-2. System.in & InputStream
 - System.in은 InputStream 타입의 정적 필드로, InputStream 타입의 새 변수를 선언하고, 그 변수에 System.in을 할당 시킬 수 있음
