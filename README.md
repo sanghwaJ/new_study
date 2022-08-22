@@ -25,6 +25,7 @@
 - [Java - 예외처리 (throw / try / catch / finally)](mdspace/java_exception.md)
 - [Java - 흐름 제어문 (Break & Continue & Return)](mdspace/java_breakContinueReturn.md)
 - [Java - this](mdspace/java_this.md)
+- [Java - 데이터 입출력 (BufferedReader & BufferedWriter)](mdspace/java_bufferdReaderAndWriter.md)
 - [Java - String & StringBuffer & StringBuilder](mdspace/java_string,sbf,sbd.md)
 - [Java - split() & StringTokenizer](mdspace/java_splitAndStringTokenizer.md)
 - [Java - 정규표현식 (Pattern & Matcher)](mdspace/java_regex.md)
@@ -54,6 +55,18 @@
 
 ### 📌 Swift
 
+### 📌 기타 CS
+- [프로그래밍 언어 별 특징 (C, C++, Java, Python)](mdspace/languages.md)
+- [프로그램, 프로세스, 스레드(멀티스레드, 싱글스레드)](mdspace/program,process,thread.md)
+- [라이브러리, 프레임워크, 아키텍처, API](mdspace/libraryAndFrameworkAndEtc.md)
+- [Git Branch 전략](mdspace/gitBranch.md)
+- [교착상태 (Dead Lock)](mdspace/deadlock.md)
+- [MSA (Micro Service Architecture)](mdspace/msa.md)
+- [Kafka](mdspace/kafka.md)
+- [Elasticsearch](mdspace/elasticsearch.md)
+- [Redis](mdspace/redis.md)
+
+
 ### 📌 Data Structure
 - [Java - 배열(Array)](mdspace/java_array.md) 
 - [Java - Queue & Stack](mdspace/java_queueAndStack.md)
@@ -69,16 +82,6 @@
 - [순차탐색 (Sequential Search)](mdspace/algo_seqSearch.md)
 - [그래프 (Graph)](mdspace/algo_graph.md)
 - [너비 우선 탐색 (BFS) & 깊이 우선 탐색 (DFS)](mdspace/algo_bfsDfs.md)
-
-### 📌 기타
-- [프로그래밍 언어 별 특징 (C, C++, Java, Python)](mdspace/languages.md)
-- [프로그램, 프로세스, 스레드(멀티스레드, 싱글스레드)](mdspace/program,process,thread.md)
-- [라이브러리, 프레임워크, 아키텍처, API](mdspace/libraryAndFrameworkAndEtc.md)
-- [Git Branch 전략](mdspace/gitBranch.md)
-- [교착상태 (Dead Lock)](mdspace/deadlock.md)
-- [MSA (Micro Service Architecture)](mdspace/msa.md)
-- [Elasticsearch](mdspace/elasticsearch.md)
-- [Kafka](mdspace/kafka.md)
 
 ---
 
