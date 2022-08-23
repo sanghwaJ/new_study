@@ -42,10 +42,10 @@ public class Fruit {
   public int count;
 
   public Fruit(String name, String color, double weight, int count) {
-    name = name;
-    color = color;
-    weight = weight;
-    count = count;
+    this.name = name;
+    this.color = color;
+    this.weight = weight;
+    this.count = count;
   }
   
   public static void main(String [] args) {
