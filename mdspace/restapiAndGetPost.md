@@ -12,7 +12,7 @@
 6. HEAD : GET과 동일하지만, 메시지 부분을 제외하고 상태줄과 헤더만 반환
 7. OPTIONS : 대상 리소스에 대한 통신 가능 옵션을 설명 (주로 CORS에서 사용)
 8. CONNECT : 대상 자원으로 식별되는 서버에 대한 터널을 설정
-9. TRACE : 대상 리소스에 대한 경로를 따라 메시지 루프백 테스트를 진행\
+9. TRACE : 대상 리소스에 대한 경로를 따라 메시지 루프백 테스트를 진행
     
 <p align="center"><img src="../imagespace/httpMethod.png"></p>
 
