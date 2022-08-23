@@ -93,6 +93,7 @@
 - REST의 원리를 따르는, REST 기반으로 구현한 API
 - OpenAPI나 MSA 등의 서비스 대부분은 REST API를 따름
 - REST API를 제공하는 서비스는 RESTful 하다고 함
+  - CRUD 기능을 모두 POST로만 처리하거나, route에 resource, id 외의 정보가 들어가는 경우를 RESTful 하지 못하다 함
 - REST API 설계 예시
   - URI는 동사보다는 명사, 대문자보다는 소문자 사용
   - 마지막에 슬래시(/)를 포함하지 않음
