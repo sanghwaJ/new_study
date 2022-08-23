@@ -1,6 +1,6 @@
 # study
 
-## 📚 Computer Science
+## 💻 Application
 
 ### 📌 Java 개념
 - [Java - 추상화(Abstraction)와 다형성(Polymorphism)](mdspace/java_AbstractionAndPolymorphism.md)
