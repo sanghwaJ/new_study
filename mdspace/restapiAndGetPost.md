@@ -61,14 +61,21 @@
 - 어떤 자원에 대한 CRUD(Create, Read, Update, Delete) 연산을 수행하기 위해 URI(자원)로 요청을 보내는 것
 - REST의 구성 요소
   - 자원(Resource) : HTTP URI
-  - 자원의 대한 행위 : HTTP Method
-  - 자원에 대한 행위의 내용 : HTTP Message Pay Load
+  - 자원의 대한 행위 : HTTP Method(GET, POST, PUT, DELETE)
+  - 자원에 대한 행위의 내용(표현) : HTTP Message Pay Load로, JSON 혹은 XML을 통해 데이터를 주고 받는 것이 일반적
 - REST의 특징
   - Server-Client 구조
+    - 자원이 있는 쪽이 Server(REST Server), 자원을 요청하는 쪽이 Client
   - Stateless (무상태)
+    - HTTP 프로토콜은 Stateless Protocol이므로, REST 역시 무상태성을 가짐
+    - 세션과 쿠키와 같은 Client의 context 정보를 Server에 저장하지 않음
+    - Server는 각각의 요청을 완전히 별개의 것으로 인식하고 처리하며, 각 API 서버는 Client의 요청만을 단순 처리함
   - Cacheable (캐시 처리 기능)
+    - HTTP를 사용하므로, 웹에서 사용하는 기존의 인프라를 활용할 수 있으며, 그 중 강력한 기능인 캐시 처리가 가능하여 REST Server의 트랜잭션을 발생시키지 않고도 빠르게 응답 처리가 가능함
   - Layered System (계층화)
+    - REST Server는 다중 계층으로 구성되며, API Server는 순수 비즈니스 로직을 수행하고, 그 앞단에 보안, 로드밸런싱, 암호화 등을 추가하여 구조상의 유연성을 줄 수 있음
   - Uniform Interface (인터페이스 일관성)
+    - URI로 지정한 Resource에 대한 조작을 통일되고 한정적인 인터페이스로 수행하며, HTTP 표준을 따르는 모든 플랫폼에서 사용이 가능하기 때문에 특정 프로그래밍 언어나 기술에 종속되지 않음
 - REST의 장점
   - HTTP 프로토콜의 인프라를 그래도 사용하므로, REST API 사용을 위한 별도의 인프라를 구축할 필요가 없음
   - HTTP 프로토콜 표준을 사용하므로, HTTP 프로토콜 표준을 따르는 모든 플랫폼에서 사용 가능
@@ -83,7 +90,9 @@
 - 즉, URL ⊂ URI !!!
 
 ### 3-3. REST API
-- REST의 원리를 따르는 API
+- REST의 원리를 따르는, REST 기반으로 구현한 API
+- OpenAPI나 MSA 등의 서비스 대부분은 REST API를 따름
+- REST API를 제공하는 서비스는 RESTful 하다고 함
 - REST API 설계 예시
   - URI는 동사보다는 명사, 대문자보다는 소문자 사용
   - 마지막에 슬래시(/)를 포함하지 않음
