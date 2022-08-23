@@ -1,4 +1,4 @@
-# GET & POST, RESTful API
+# GET & POST, REST API
 
 ## 1. HTTP Method
 - 클라이언트가 웹 서버에게 사용자의 목적이나 종류를 알리는 수단

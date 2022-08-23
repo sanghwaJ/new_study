@@ -39,7 +39,7 @@
 - [Spring - DTO & VO](mdspace/java_dtoAndVo.md)
 
 ### 📌 Web
-- [GET & POST, RESTful API](mdspace/restapiAndGetPost.md)
+- [GET & POST, REST API](mdspace/restapiAndGetPost.md)
 - [Cookie & Session (+ Cache)](mdspace/cookieAndSession.md)
 - [WebSocket](mdspace/websocket.md)
 
