@@ -55,7 +55,7 @@
 
 <p align="center"><img src="../imagespace/get&post.png"></p>
 
-## 3. RESTful API
+## 3. REST API
 
 ### 3-1. REST
 - 어떤 자원에 대한 CRUD(Create, Read, Update, Delete) 연산을 수행하기 위해 URI(자원)로 요청을 보내는 것
