@@ -37,6 +37,7 @@
 - [Spring - IOC, DI, DL, AOP](mdspace/java_springIocDiDlAop.md)
 - [Spring - Spring Container & Spring Bean](mdspace/java_springContainerBean.md)
 - [Spring - DTO & VO](mdspace/java_dtoAndVo.md)
+- [Spring - Transaction 사용 방법](mdspace/spring_transaction.md)
 
 ### 📌 Web
 - [GET & POST, REST API](mdspace/restapiAndGetPost.md)
