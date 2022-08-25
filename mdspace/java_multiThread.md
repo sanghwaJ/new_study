@@ -74,11 +74,12 @@
   
 - Step 2) start() 메소드 호출
   - 위와 같이 작업 스레드 생성을 완료한 후, start() 메소드를 호출하여 해당 작업 스레드를 실행
-  <br/>
+
   ```java
   // 매개값으로 받은 Runnable의 run()메소드 실행
   thread.start();
   ```
+  
 - 예제) 0.5초 간격으로 비프음을 발생시키면서 동시에 프린팅하는 작업
 
   ```java
@@ -158,6 +159,7 @@ public class WorkerThread extends Thread{
 
 Thread thread = new WorkerThread();
 ```
+
 ```java
 // 방법 1과 같이 익명 구현 객체를 통해 코드를 절약할 수도 있음
 Thread thread = new Thread(){
@@ -168,6 +170,7 @@ Thread thread = new Thread(){
 ```
 - 이렇게 생성된 작업 스레드에서 start() 메소드를 호출하면, 작업 스레드는 자신의 run() 메소드를 실행함
 - 예제) 0.5초 간격으로 비프음을 발생시키면서 동시에 프린팅하는 작업
+  
 ```java
 public class BeepPrintExample3 {
 	public static void main(String[] args) {
@@ -208,6 +211,7 @@ public class BeepPrintExample3 {
 - 멀티 스레드 프로그램은 스레드들이 객체를 공유해서 작업해야 하는 경우가 있는데, 이런 경우 스레드 A를 사용하던 객체가 스레드 B에 의해 상태가 변경될 수 있기 때문에 의도한 것과 다른 결과가 나올 수 있음
 - 따라서, 한 스레드가 사용중인 객체를 다른 스레드가 변경할 수 없도록 하려면 스레드 작업이 끝날 때까지 객체를 잠궈 다른 스레드가 사용할 수 없도록 해야함
 - 이러한 경우, 단 하나의 스레드만 실행할 수 있는 코드영역(임계영역)을 지정하기 위해 동기화 메소드와 동기화 블록을 사용하고, 이 영역 안에서는 즉시 객체에 잠금을 걸어 다른 스레드가 임계영역 코드를 실행하지 못하도록 함
+  
 ```java
 public void method(){
 	// 여러 스레드가 실행 가능한 영역
