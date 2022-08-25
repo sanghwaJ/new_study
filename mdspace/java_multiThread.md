@@ -37,6 +37,7 @@
   ```java
   Thread thread = new Thread(Runnable target);
   ```
+
   - Runnable은 작업 스레드가 실행할 수 있는 코드를 가지고 있는 객체이자 인터페이스 타입이기 때문에 구현 클래스를 만들어 대입해야함
   - 구현 클래스에서 Runnable의 run() 메소드를 재정의하고, 작업 스레드가 실행할 코드를 작성함
   <br/>
@@ -47,6 +48,7 @@
     }
   }
   ```
+
   - Runnable은 작업 내용을 가지고 있는 객체이지 실제 스레드는 아니기 때문에 Runnable 구현 객체를 생성한 후, 이것을 매개값으로 하여 Thread 생성자를 호출해야함
   <br/>
   ```java
@@ -56,6 +58,7 @@
 	Thread thread = new Thread(task); 
   }
   ```
+
   - 위와 같은 방법도 있지만, Runnable 익명 객체를 매개 값으로 사용하는 방법도 있으며, 코드가 짧기 때문에 아래의 방법을 더 많이 사용함
   <br/>
   ```java
@@ -96,6 +99,7 @@
 	}
   }
   ```
+
   ```java
   // 메인 스레드와 작업 스레드를 동시에 실행 1
   public class BeepPrintExample1 {
@@ -117,6 +121,7 @@
     }
   }
   ```
+  
   ```java
   // 메인 스레드와 작업 스레드를 동시에 실행 2
   public class BeepPrintExample2 {
