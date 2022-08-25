@@ -64,7 +64,6 @@
   ```java
   public class RunnableAnony {
 	Thread thread = new Thread(new Runnable() {
-		
 		@Override
 		public void run() {
 			// 스레드가 실행할 코드 
