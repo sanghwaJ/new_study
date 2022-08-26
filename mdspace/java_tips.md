@@ -89,7 +89,7 @@ answer = random.nextInt(100)
 answer = ((int)(Math.random() * 6) + 3); // 3 ~ 8
 ```
 
-## 2) Array
+## 2-1) 1차원 Array
 
 ```java
 // Array 선언
@@ -97,18 +97,9 @@ String[] array = {"a", "b", "c"};
 int[] array = {1, 2, 3};
 
 // Array 채우기(Array의 모든 값을 같은 값으로 초기화 함)
-// 1차원 Array
 int[] array = new int[10];
 Arrays.fill(array, 0);
 System.out.println(Arrays.toString(array));
-// 2차원 Array
-String[][] array = new String[10][10];
-for(int i = 0; i < array.length; i++) {
-	Arrays.fill(array[i], "True");
-}
-for(int i = 0; i < array.length; i++) {
-	System.out.println(Arrays.toString(array[i]));
-}
 
 // 1차원 String Array 정렬
 String[] strArr = {'c', 'b', 'a'};
@@ -130,17 +121,6 @@ int[] intArr = Arrays.stream(integerArr).mapToInt(Integer::intValue).toArray();
 // 정렬 시작 위치와 끝 위치 지정하여 정렬하기
 Arrays.sort(arr, 1, 3);
 Arrays.sort(arr, 1, 3, Collections.reverseOrder());
-
-// 2차원 Array 정렬
-Arrays.sort(tickets, new Comparator<String[]>() {
-	@Override
-	public int compare(String[] o1, String[] o2) {
-		if(o1[0].toString().contentEquals(o2[0].toString()))
-			return o1[1].toString().compareTo(o2[1].toString());
-		else
-			return o1[0].toString().compareTo(o2[0].toString());
-	}			
-});
 
 // 1부터 10까지 Array 만들기
 int[] array = new int[10];
@@ -169,6 +149,62 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 List<Integer> list = Arrays.stream(array).boxed().collect(Collectors.toList());
+```
+
+## 2-2) 2차원 Array
+
+```java
+// 2차원 Array 채우기(Array의 모든 값을 같은 값으로 초기화 함)
+String[][] array = new String[10][10];
+for(int i = 0; i < array.length; i++) {
+	Arrays.fill(array[i], "True");
+}
+
+// 2차원 String Array 정렬 방법
+Arrays.sort(tickets, new Comparator<String[]>() {
+	@Override
+	public int compare(String[] o1, String[] o2) {
+		if(o1[0].toString().contentEquals(o2[0].toString()))
+			return o1[1].toString().compareTo(o2[1].toString());
+		else
+			return o1[0].toString().compareTo(o2[0].toString());
+	}			
+});
+
+// 2차원 int Array 정렬 방법 1
+Arrays.sort(arr, new Comparator<int[]>() {
+    @Override
+    public int compare(int[] o1, int[] o2) {
+        // 첫번째 숫자 기준 오름차순 {1,30}{2,10}{3,50}{4,20}{5,40}
+        return o1[0]-o2[0]; 
+        // 첫번째 숫자 기준 내림차순 {5,40}{4,20}{3,50}{2,10}{1,30}
+        return o2[0]-o1[0]; 
+        // 두번째 숫자 기준 오름차순 {2,10}{4,20}{1,30}{5,40}{3,50}
+        return o1[1]-o2[1]; 
+        // 두번째 숫자 기준 내림차순 {3,50}{5,40}{1,30}{4,20}{2,10}
+        return o2[1]-o1[1]; 
+    }
+});
+
+// 2차원 int Array 정렬 방법 2(오름차순)
+Arrays.sort(arr, Comparator.comparingInt(o1 -> o1[0]));
+
+// 2차원 Array 정렬 방법 2(오름차순) - 두번째 요소도 고려하여 정렬
+Arrays.sort(arr, (o1, o2) -> {
+    if(o1[0] == o2[0]){
+        return Integer.compare(o1[1], o2[1]);
+    } else {
+        return Integer.compare(o1[0], o2[0]);
+    }
+});
+
+// 2차원 Array 출력 1
+for(int i = 0; i < array.length; i++) {
+	System.out.println(Arrays.toString(array[i]));
+}
+
+// 2차원 Array 출력 2 (다차원 출력 모두 가능)
+System.out.println(Arrays.deepToString(arr));
 ```
 
 ## 3) ArrayList

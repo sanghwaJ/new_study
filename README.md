@@ -36,9 +36,11 @@
 
 ### 📌 Spring
 - [Spring - Spring VS Spring Boot](mdspace/springAndSpringBoot.md)
+- [Spring - Architecture (MVC & Spring Boot + JPA)](mdspace/spring_Architecture.md)
+- [Spring - DTO & VO](mdspace/java_dtoAndVo.md)
 - [Spring - IOC, DI, DL, AOP](mdspace/java_springIocDiDlAop.md)
 - [Spring - Spring Container & Spring Bean](mdspace/java_springContainerBean.md)
-- [Spring - DTO & VO](mdspace/java_dtoAndVo.md)
+- [Spring - Annotation (+ Lombok)](mdspace/spring_annotation.md)
 - [Spring - Transaction 사용 방법](mdspace/spring_transaction.md)
 
 ### 📌 Web
@@ -58,7 +60,7 @@
 
 ### 📌 Swift
 
-### 📌 기타 CS
+### 📌 기타
 - [프로그래밍 언어 별 특징 (C, C++, Java, Python)](mdspace/languages.md)
 - [프로그램, 프로세스, 스레드(멀티스레드, 싱글스레드)](mdspace/program,process,thread.md)
 - [라이브러리, 프레임워크, 아키텍처, API](mdspace/libraryAndFrameworkAndEtc.md)
@@ -97,6 +99,7 @@
 ### 📌 Database
 - [Query 최적화](mdspace/query.md)
 - [트랜잭션 격리 수준 (Transaction Isolation Level)](mdspace/transaction.md)
+- [ORM](mdspace/orm.md)
 - [JPA](mdspace/jpa.md)
   
 ---
@@ -108,6 +111,8 @@
 - [프로그래머스 - 타겟넘버](javaspace/Solution3.java)
 - [프로그래머스 - 위장](javaspace/Solution4.java)
 - [프로그래머스 - 전화번호 목록](javaspace/Solution5.java)
+- [프로그래머스 - 폰켓몬](javaspace/Solution28.java)
+- [프로그래머스 - 피로도](javaspace/Solution29.java)
 - [BOJ - 1541 잃어버린 괄호](javaspace/Solution1.java)
 - [BOJ - 2480 주사위세개](javaspace/Solution6.java)
 - [BOJ - 2484 주사위네개](javaspace/Solution7.java)
