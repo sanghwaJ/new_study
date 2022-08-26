@@ -36,7 +36,7 @@
 
 ### 📌 Spring
 - [Spring - Spring VS Spring Boot](mdspace/springAndSpringBoot.md)
-- [Spring - Architecture (MVC & Spring Boot + JPA)](mdspace/spring_Architecture.md)
+- [Spring - Architecture (MVC & Spring Boot + JPA)](mdspace/spring_architecture.md)
 - [Spring - DTO & VO](mdspace/java_dtoAndVo.md)
 - [Spring - IOC, DI, DL, AOP](mdspace/java_springIocDiDlAop.md)
 - [Spring - Spring Container & Spring Bean](mdspace/java_springContainerBean.md)
