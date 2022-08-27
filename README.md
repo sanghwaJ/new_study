@@ -113,6 +113,7 @@
 - [프로그래머스 - 전화번호 목록](javaspace/Solution5.java)
 - [프로그래머스 - 폰켓몬](javaspace/Solution28.java)
 - [프로그래머스 - 피로도](javaspace/Solution29.java)
+- [프로그래머스 - 가장 큰 수](javaspace/Solution30.java)
 - [BOJ - 1541 잃어버린 괄호](javaspace/Solution1.java)
 - [BOJ - 2480 주사위세개](javaspace/Solution6.java)
 - [BOJ - 2484 주사위네개](javaspace/Solution7.java)
