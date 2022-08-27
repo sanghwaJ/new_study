@@ -312,17 +312,20 @@ Integer[] integerArr = Arrays.stream(numbers).boxed().toArray(Integer[]::new);
 Arrays.sort(integerArr, new Comparator<Integer>() {
     @Override
     public int compare(Integer o1, Integer o2) {
+        // 비교할 조건에 맞는 식을 넣음
         // 오름차순 (ASC)
         return Integer.compare(o1, o2);
         // 내림차순 (DESC)
         // return Integer.compare(o2, o1);
     }
 });
+
 // String 정렬
 String[] strs = {"AA", "CB", "AB", "CA", "AC", "BA", "BB", "BC", "CC"};
 Arrays.sort(strs, new Comparator<String>() {
     @Override
     public int compare(String o1, String o2) {
+        // 비교할 조건에 맞는 식을 넣음
         // ASC
         return (o1).compareTo(o2);
         // DESC
