@@ -1,5 +1,6 @@
-// 프로그래머스 - 피로도
+// 프로그래머스 - 가장 큰 수
 import java.util.*;
+import java.util.Collections;
 
 public class Solution30 {
     public static void main(String[] args) {
@@ -9,36 +10,36 @@ public class Solution30 {
     }
 
     public static int solution(int[] numbers) {
-
         /* 
-        Integer[] integerArr = Arrays.stream(numbers).boxed().toArray(Integer[]::new);
-        Arrays.sort(integerArr,new Comparator<Integer>() {
+        String[] strs = {"AA", "CB", "AB", "CA", "AC", "BA", "BB", "BC", "CC"};
+        Collections.sort(strs, new Comparator<String>() {
             @Override
-            public int compare(Integer o1, Integer o2) {
-                return Integer.compare(o2, o1);
-            }
-        });
-        */
-        Integer[] integerArr = Arrays.stream(numbers).boxed().toArray(Integer[]::new);
-        Collections.sort(integerArr, new Comparator<Integer>() {
-            @Override
-            public int compare(Integer o1, Integer o2) {
-                //o1보다 o2의 넘버가 크다면 no기준 오름차순 정렬
-                if(o1.getNo()<o2.getNo()) { //1,2,3
-                    return -1;
-                } else if(o1.getNo()>o2.getNo()){
-                    return 1;
-                } else {
-                    return 0;				
-                }			
+            public int compare(String o1, String o2) {
+                return (o1).compareTo(o2);
             }			
         });
-        
+        */
+        String[] strs = {"AA", "CB", "AB", "CA", "AC", "BA", "B", "BC", "CC"};
+        Arrays.sort(strs, new Comparator<String>() {
+            @Override
+            public int compare(String o1, String o2) {
+                // ASC
+                return (o1).compareTo(o2);
+                // DESC
+                // return (o2).compareTo(o1);
+            }
+        });
+        System.out.println(Arrays.toString(strs));
 
-
-        for (Integer i : integerArr) {
-            System.out.println(i);
+        String[] strNums = new String[numbers.length];
+        for (int i=0; i<numbers.length; i++){
+            strNums[i] = Integer.toString(numbers[i]);
         }
+
+        Arrays.sort(strNums, Collections.reverseOrder());
+        System.out.println(Arrays.toString(strNums));
+        
+        
 
         return 0;
     }

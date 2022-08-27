@@ -305,7 +305,7 @@ public int compare(인자1, 인자2){
     - Comparator<클래스타입> 클래스명 = new Comparator<클래스타입>(); 으로 정의하며, 일반적으로 compare 메소드를 오버라이드해서 사용함
     - 클래스타입 비교대상 2개를 지역변수 o1, o2로 선언하고 return 값으로 음수, 0, 양수를 반환하면서 정렬할 수 있음
 ```java
-// Arrays.sort에 사용
+// int 정렬
 int[] numbers = {3, 30, 34, 5, 9};
 // int Array => Integer Array
 Integer[] integerArr = Arrays.stream(numbers).boxed().toArray(Integer[]::new);
@@ -318,24 +318,22 @@ Arrays.sort(integerArr, new Comparator<Integer>() {
         // return Integer.compare(o2, o1);
     }
 });
-
-// Collections.sort에 사용
-Collections.sort(list, new Comparator<Person>() {
-	@Override
-	public int compare(Person o1, Person o2) {
-		//o1보다 o2의 넘버가 크다면 no기준 오름차순 정렬
-		if(o1.getNo()<o2.getNo()) { //1,2,3
-			return -1;
-		} else if(o1.getNo()>o2.getNo()){
-			return 1;
-		} else {
-			return 0;				
-        }			
-	}			
+// String 정렬
+String[] strs = {"AA", "CB", "AB", "CA", "AC", "BA", "BB", "BC", "CC"};
+Arrays.sort(strs, new Comparator<String>() {
+    @Override
+    public int compare(String o1, String o2) {
+        // ASC
+        return (o1).compareTo(o2);
+        // DESC
+        // return (o2).compareTo(o1);
+    }
 });
 
-
-
+// 참고 : Lambda를 이용한 String 정렬
+Arrays.sort(strs, (a,b)->{
+    return (a).compareTo(b);
+});
 ```
 
 ## HashMap
