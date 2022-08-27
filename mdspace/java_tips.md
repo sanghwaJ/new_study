@@ -1,6 +1,6 @@
 # Java Tips
 
-## 1) 공통 Tips
+## 공통 Tips
 
 1. Import : 대부분의 라이브러리 함수, 콜렉션 함수를 사용할 수 있도록 선언하고 시작하자.
 
@@ -89,7 +89,7 @@ answer = random.nextInt(100)
 answer = ((int)(Math.random() * 6) + 3); // 3 ~ 8
 ```
 
-## 2-1) 1차원 Array
+## 1차원 Array
 
 ```java
 // Array 선언
@@ -151,7 +151,7 @@ import java.util.stream.Collectors;
 List<Integer> list = Arrays.stream(array).boxed().collect(Collectors.toList());
 ```
 
-## 2-2) 2차원 Array
+## 2차원 Array
 
 ```java
 // 2차원 Array 채우기(Array의 모든 값을 같은 값으로 초기화 함)
@@ -207,7 +207,7 @@ for(int i = 0; i < array.length; i++) {
 System.out.println(Arrays.deepToString(arr));
 ```
 
-## 3) ArrayList
+## ArrayList
 
 ```java
 // ArrayList 선언
@@ -271,7 +271,74 @@ while(iter.hasNext()){
 }
 ```
 
-## 4) HashMap
+## 비교 정렬 (Array나 List에 사용 가능)
+- compareTo() : 문자열의 사전순 값을 비교하여 그에 해당하는 int값 리턴
+    - A > B 라고 가정했을 때,
+        - A == A => 0 리턴 (동일한 경우)
+        - A > B => 1 리턴 (좌측 값이 더 큰 경우)
+        - B > A => -1 리턴 (좌측 값이 작은 경우)
+```java
+public void test(){ 
+    String str1 = "AA"; 
+    String str2 = "AA"; 
+    String str3 = "BB"; 
+ 
+    System.out.println(str1.compareTo(str2));  // 결과  0 
+    System.out.println(str2.compareTo(str3));  // 결과 -1 
+    System.out.println(str3.compareTo(str2));  // 결과  1 
+} 
+```
+- compare() : Comparator 인터페이스를 구현할 때 사용되는 메소드로, 2개의 인자를 넘겨 내부 구현에 따라 int 값을 리턴
+```java
+@Override
+public int compare(인자1, 인자2){
+    if(인자1 > 인자2){
+      return 1;
+    }else if(인자1 < 인자2){
+      return -1;
+    }else{
+      return 0;
+    }
+}
+```
+- Comparator
+    - Comparator<클래스타입> 클래스명 = new Comparator<클래스타입>(); 으로 정의하며, 일반적으로 compare 메소드를 오버라이드해서 사용함
+    - 클래스타입 비교대상 2개를 지역변수 o1, o2로 선언하고 return 값으로 음수, 0, 양수를 반환하면서 정렬할 수 있음
+```java
+// Arrays.sort에 사용
+int[] numbers = {3, 30, 34, 5, 9};
+// int Array => Integer Array
+Integer[] integerArr = Arrays.stream(numbers).boxed().toArray(Integer[]::new);
+Arrays.sort(integerArr, new Comparator<Integer>() {
+    @Override
+    public int compare(Integer o1, Integer o2) {
+        // 오름차순 (ASC)
+        return Integer.compare(o1, o2);
+        // 내림차순 (DESC)
+        // return Integer.compare(o2, o1);
+    }
+});
+
+// Collections.sort에 사용
+Collections.sort(list, new Comparator<Person>() {
+	@Override
+	public int compare(Person o1, Person o2) {
+		//o1보다 o2의 넘버가 크다면 no기준 오름차순 정렬
+		if(o1.getNo()<o2.getNo()) { //1,2,3
+			return -1;
+		} else if(o1.getNo()>o2.getNo()){
+			return 1;
+		} else {
+			return 0;				
+        }			
+	}			
+});
+
+
+
+```
+
+## HashMap
 
 ```java
 // Map 선언
@@ -314,7 +381,7 @@ hashmap.isEmpty();
 hashmap.getOrDefault("Java", -1); 
 ```
 
-## 5) ArrayList in ArrayList (2차원 list)
+## ArrayList in ArrayList (2차원 list)
 
 ```java
 // 2차원 list 1
@@ -343,7 +410,7 @@ for(int i = 0; i < N+1; i++) {
 System.out.println(list); // [[], [], [], [], [], [], [], [], [], [], []]
 ```
 
-## 6) ArrayList in HashMap
+## ArrayList in HashMap
 
 ```java
 // 선언
@@ -369,7 +436,7 @@ System.out.println(getMap); // {Java=A}
 System.out.println(getMap.get("Java")); // A
 ```
 
-## 7) HashMap in ArrayList
+## HashMap in ArrayList
 
 ```java
 // 선언
@@ -390,7 +457,7 @@ ArrayList<Integer> newList = (ArrayList<Integer>) map.get("list");
 System.out.println(newList); // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 ```
 
-## 8) ArrayList to HashMap
+## ArrayList to HashMap
 
 ```java
 // ArrayList 요소에 idx 붙이기
@@ -430,7 +497,7 @@ for(String target : list){
 System.out.println(map); // {a=2, b=1, c=2} 
 ```
 
-## 9) HashMap to ArrayList
+## HashMap to ArrayList
 
 ```java
 HashMap<Integer, String> map = new HashMap<>();
@@ -451,7 +518,7 @@ System.out.println(Arrays.toString(valueArray)); // [Apple, Banana, Orange]
 System.out.println(keyList); // [1, 2, 3]
 ```
 
-## 10) HashSet - 중복 허용 X, 자동 정렬 O
+## HashSet - 중복 허용 X, 자동 정렬 O
 
 ```java
 HashSet<String> set = new HashSet<>();
@@ -472,7 +539,7 @@ while(iter.hasNext()) {
 }
 ```
 
-## 11) 문자열
+## 문자열
 
 ```java
 // split1 - 정규식으로 문자열 구분, 결과값 배열
@@ -566,7 +633,7 @@ String S = "0".repeat(10);
 System.out.println(S); // 0000000000
 ```
 
-## 12) LinkedList - 데이터의 추가/삭제가 많은 경우 사용
+## LinkedList - 데이터의 추가/삭제가 많은 경우 사용
 
 ```java
 LinkedList<Integer> list = new LinkedList<>(Arrays.asList(1,2,3,4,5));
@@ -608,7 +675,7 @@ while(iter.hasNext()) {
 }
 ```
 
-## 13) Stack & Queue
+## Stack & Queue
 ```java
 Stack st = new Stack();
 Queue q = new LinkedList();	//Queue의 인터페이스 구현체인 LinkedList를 사용
@@ -642,7 +709,7 @@ while(!q.isEmpty()) {
 <p align="center"><img src="../imagespace/javatips1.jpg"></p>
 <p align="center"><img src="../imagespace/javatips2.jpg"></p>
 
-## 14) DFS
+## DFS
 
 ```java
 // 1차원 DFS
@@ -702,7 +769,7 @@ public static void dfs(int x, int y, String[][] array, boolean[][] visit) {
 }
 ```
 
-## 15) BFS
+## BFS
 
 ```java
 // 1차원 BFS
@@ -789,7 +856,7 @@ class Main {
 }
 ```
 
-## 16) 동서남북 방향 이동
+## 동서남북 방향 이동
 
 ```java
 // target 주변 동서남북 출력
@@ -817,7 +884,7 @@ for(int i = 0; i < array.length; i++) {
 }
 ```
 
-## 17) 조합(Combination)
+## 조합(Combination)
 ```java
 import java.util.*;
 
@@ -855,7 +922,7 @@ class Main {
 }
 ```
 
-## 18) StringBuffer & StringBuilder
+## StringBuffer & StringBuilder
 
 <p align="center"><img src="../imagespace/javatips3.jpg"></p>
 
@@ -898,7 +965,7 @@ System.out.println(sbb); //마지막상태
 sbb.setLength(0); // 초기화
 ```
 
-## 19) 삼항연산자
+## 삼항연산자
 - 3개의 피연산자를 필요로 하는 연산자로, 단순한 if-else 구문인 경우 true/false를 판단하여 결과 값이나 원하는 연산 수행
 - 기존 if-else 구문보다 코드 생산성을 높여주나, 성능 면에서는 영향은 없음
 
