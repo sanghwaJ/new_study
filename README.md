@@ -117,6 +117,8 @@
 - [프로그래머스 - H-Index](javaspace/Solution31.java)
 - [프로그래머스 - 최소직사각형](javaspace/Solution32.java)
 - [프로그래머스 - 모음사전](javaspace/Solution33.java)
+- [프로그래머스 - 같은 숫자는 싫어](javaspace/Solution34.java)
+- [프로그래머스 - 올바른 괄호](javaspace/Solution35.java)
 - [BOJ - 1541 잃어버린 괄호](javaspace/Solution1.java)
 - [BOJ - 2480 주사위세개](javaspace/Solution6.java)
 - [BOJ - 2484 주사위네개](javaspace/Solution7.java)

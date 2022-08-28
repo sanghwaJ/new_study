@@ -623,10 +623,16 @@ for(int i = strArray.length-1; i >= 0; i--) {
 }
 System.out.println(reverseStr);
 
-// 문자열 각 요소 빠른 접근 방법
+// 문자열 각 요소 빠른 접근 방법 1
 String S = "abcdefgh";
 for (char c : S.toCharArray()) {
     System.out.println(c);
+}
+
+// 문자열 각 요소 빠른 접근 방법 2
+String test = "helloworld";
+for (int i=0; i<test.length(); i++) {
+    System.out.println(test.charAt(i));
 }
 
 // 문자열 반복 (Java11 이상에서 사용 가능)
