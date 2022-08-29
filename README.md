@@ -101,7 +101,7 @@
 - [트랜잭션 격리 수준 (Transaction Isolation Level)](mdspace/transaction.md)
 - [ORM](mdspace/orm.md)
 - [JPA](mdspace/jpa.md)
-  
+
 ---
 
 ## 👨‍💻 Practice

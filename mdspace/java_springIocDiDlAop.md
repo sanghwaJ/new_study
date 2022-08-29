@@ -1,4 +1,4 @@
-# Java & Spring - IOC, DI, DL, AOP
+# Spring - IOC, DI, DL, AOP
 
 ## 1. Spring Framework
 - Framework : 소프트웨어를 설계, 구현, 운영하기 위한 기반을 제공하여 비즈니스에 집중 할 수 있도록 하는 것

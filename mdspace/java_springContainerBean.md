@@ -1,4 +1,4 @@
-# Java & Spring - Spring Container & Spring Bean
+# Spring - Spring Container & Spring Bean
 
 ## 1. Spring Container란?
 - 자바 객체의 생명 주기를 관리하며, 생성된 자바 객체(Bean)들에게 추가적인 기능을 제공하는 역할
