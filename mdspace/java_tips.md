@@ -790,7 +790,7 @@ class Main {
 
     public static void bfs(int start, int[] array, boolean[] visit) {
         Queue<Integer> queue = new LinkedList<>();
-        queue.add(start);
+        queue.offer(start);
 
 				System.out.println(array[start]);
         visit[start] = true;
