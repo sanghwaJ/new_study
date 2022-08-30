@@ -20,13 +20,13 @@ public class Solution38 {
 
         visit = new boolean[maps.length][maps[0].length];
 
-        dfs(0, 0, maps);
+        bfs(0, 0, maps);
 
         return cnt;
     }
 
     // 최단경로 탐색 문제 => BFS 사용
-    public int bfs(int x, int y, int[][] maps){
+    public static int bfs(int x, int y, int[][] maps){
         Queue<Node> q = new LinkedList<>();
 
         q.offer(new Node(x, y, 1));
@@ -35,14 +35,19 @@ public class Solution38 {
 
         while(!q.isEmpty()) {
             Node node = q.poll();
-            //if (node.x == )
+            
+            for (int i=0; i<maps.length; i++) {
+                for (int j=0; i<maps[0].length; j++) {
+                    if 
+                }
+            }
         }
 
 
         return -1;
     }
 
-    public class Node {
+    public static class Node {
         int x;
         int y;
         int cost;

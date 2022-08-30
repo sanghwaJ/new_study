@@ -800,7 +800,7 @@ class Main {
 
             for(int i = 0; i < array.length; i++) {
                 if(!visit[i]) {
-                    queue.add(i);
+                    queue.offer(i);
                     System.out.println(array[i]);
                     visit[i] = true;
                 } 
