@@ -18,7 +18,9 @@
 - [Java - URL Connection & Http URL Connection](mdspace/java_urlConnection.md)
 - [Java - HttpServletRequest & HttpServletResponse](mdspace/java_httpServlet.md)
 - [Java - Multi Thread](mdspace/java_multiThread.md)
-
+- [JPA](mdspace/jpa.md)
+- [JUnit](mdspace/java_junit.md)
+  
 ### 📌 Java 문법
 - [Java Tips](mdspace/java_tips.md)
 - [Java - 메소드의 구분](mdspace/java_method.md)
@@ -101,7 +103,6 @@
 - [Query 최적화](mdspace/query.md)
 - [트랜잭션 격리 수준 (Transaction Isolation Level)](mdspace/transaction.md)
 - [ORM](mdspace/orm.md)
-- [JPA](mdspace/jpa.md)
 
 ---
 
