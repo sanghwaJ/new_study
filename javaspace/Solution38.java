@@ -11,39 +11,51 @@ public class Solution38 {
     public static boolean[][] visit;
     public static int[] dx = {0,1,0,-1};
     public static int[] dy = {1,0,-1,0};
-    public static int xx = 0;
-    public static int yy = 0;
-    public static int cnt = 0;
+    public static int cnt, xLen, yLen;
 
     public static int solution(int[][] maps) {
-        //int cnt = 0;
+        xLen = maps.length;
+        yLen = maps[0].length;
 
-        visit = new boolean[maps.length][maps[0].length];
+        visit = new boolean[xLen][yLen];
 
-        bfs(0, 0, maps);
+        //System.out.println(Arrays.deepToString(visit));
 
-        return cnt;
+        return bfs(0, 0, maps);
+        //return 1;
     }
 
     // 최단경로 탐색 문제 => BFS 사용
     public static int bfs(int x, int y, int[][] maps){
         Queue<Node> q = new LinkedList<>();
 
-        q.offer(new Node(x, y, 1));
-
         visit[x][y] = true;
+        q.offer(new Node(x, y, 1));
 
         while(!q.isEmpty()) {
             Node node = q.poll();
+
+            // 목표 지점에 도착하면 cost return
+            if (node.x == xLen-1 && node.y == yLen-1) {
+                return node.cost;
+            }
             
-            for (int i=0; i<maps.length; i++) {
-                for (int j=0; i<maps[0].length; j++) {
-                    if 
+            for (int i=0; i<4; i++) {
+                int xx = node.x + dx[i];
+                int yy = node.y + dy[i];
+
+                // 좌표 범위를 넘어가면 continue
+                if (xx < 0 || xx > xLen-1 || yy < 0 || yy > yLen-1) {
+                    continue;
+                }
+
+                // 아직 방문하지 않았거나, 존재하는 길(1)이라면 node 추가
+                if (!visit[xx][yy] && maps[xx][yy] == 1) {
+                    visit[xx][yy] = true;
+                    q.offer(new Node(xx, yy, node.cost + 1));
                 }
             }
         }
-
-
         return -1;
     }
 
