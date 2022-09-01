@@ -11,18 +11,15 @@ public class Solution38 {
     public static boolean[][] visit;
     public static int[] dx = {0,1,0,-1};
     public static int[] dy = {1,0,-1,0};
-    public static int cnt, xLen, yLen;
+    public static int xLen, yLen;
 
     public static int solution(int[][] maps) {
         xLen = maps.length;
         yLen = maps[0].length;
 
         visit = new boolean[xLen][yLen];
-
-        //System.out.println(Arrays.deepToString(visit));
-
+        System.out.println(Arrays.deepToString(visit));
         return bfs(0, 0, maps);
-        //return 1;
     }
 
     // 최단경로 탐색 문제 => BFS 사용
