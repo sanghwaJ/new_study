@@ -31,11 +31,11 @@ public class Solution36 {
     
     // 최단경로 탐색 문제 => BFS 사용
     public static int bfs(int x, int y, int h, String[][] map3d){
-        for (int i=0; i<height; i++) {
-            for (int j=0; j<length) {
-                for (int k=0;)
-            }
-        }
+        // for (int i=0; i<height; i++) {
+        //     for (int j=0; j<length) {
+        //         for (int k=0;)
+        //     }
+        // }
         
         
         Queue<Node> q = new LinkedList<>();
