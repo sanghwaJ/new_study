@@ -37,7 +37,6 @@ public class Solution36 {
         //     }
         // }
         
-        
         Queue<Node> q = new LinkedList<>();
 
         visit[x][y] = true;
