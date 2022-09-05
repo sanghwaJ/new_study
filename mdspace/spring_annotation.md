@@ -220,6 +220,42 @@ class DemoApplicationTests {
 ### 2-15. @Test
 - JUnit에서 테스트 할 대상을 표시해줌
 
+### 2-16. @Resource
+- 표준 Java에서 지원하는 Dependency 정의 용도의 Annotation (의존성 주입을 위해 사용)
+- Annotation 사용으로 인해 특정 Framework에 종속적인 어플리케이션을 구성하지 않기 위해서는 @Resource를 사용할 것을 권장
+
+```java
+package expert006;
+import javax.annotation.Resource;
+
+public class Car {
+    @Resource
+    Tire tire;
+
+    public String getTireBrand() {
+        return "장착된 타이어: " + tire.getBrand();
+    }
+}
+```
+
+### 2-17. @Autowired
+- Spring Framework에서 지원하는 Dependency 정의 용도의 Annotation (의존성 주입을 위해 사용)
+- Spring Framework에 종속적이긴 하지만 정밀한 Dependency Injection이 필요한 경우에 유용
+
+```java
+package expert006;
+import org.springframework.beans.factory.annotation.Autowired;
+
+public class Car {
+    @Autowired
+    Tire tire;
+
+    public String getTireBrand() {
+        return "장착된 타이어: " + tire.getBrand();
+    }
+}
+```
+
 ## 3. Lombok
 - Lombok은 코드를 크게 줄여주여 가독성을 크게 높일 수 있는 라이브러리로, 대표적인 Annotation은 아래와 같음
 
