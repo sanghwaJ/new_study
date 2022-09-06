@@ -1,5 +1,10 @@
 // sTest1
 import java.util.*;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class Solution36 {
     public static void main(String[] args) {
@@ -21,20 +26,16 @@ public class Solution36 {
 
         visit = new boolean[height][length][width];
         
-        ArrayList<Map <String, Object>> listMap = new ArrayList<>();
 
-        HashMap<String, Object> map1 = new HashMap<>();
-        map1.put("Java", "A");
 
-        HashMap<String, Object> map2 = new HashMap<>();
-        map2.put("Python", "B");
-
-        listMap.add(map1);
-        listMap.add(map2);
-
-        System.out.println(listMap.toString());
-        
-
+        SimpleDateFormat dateParser = new SimpleDateFormat("yyyy-MM-dd 09:00:00");
+        Date today = new Date();
+        //System.out.println(today);
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(today);
+        cal.add(Calendar.HOUR, 1);
+        System.out.println(dateParser.format(cal.getTime()));
+ 
         //System.out.println(Arrays.deepToString(visit));
         return bfs(0, 0, 0, map3d);
 
