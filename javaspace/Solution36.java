@@ -25,18 +25,7 @@ public class Solution36 {
         height = map3d.length;
 
         visit = new boolean[height][length][width];
-        
 
-
-        SimpleDateFormat dateParser = new SimpleDateFormat("yyyy-MM-dd 09:00:00");
-        Date today = new Date();
-        //System.out.println(today);
-        Calendar cal = Calendar.getInstance();
-        cal.setTime(today);
-        cal.add(Calendar.HOUR, 1);
-        System.out.println(dateParser.format(cal.getTime()));
- 
-        //System.out.println(Arrays.deepToString(visit));
         return bfs(0, 0, 0, map3d);
 
         //return 1;
