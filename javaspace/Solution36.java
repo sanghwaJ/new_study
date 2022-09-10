@@ -4,7 +4,6 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Date;
 
 public class Solution36 {
     public static void main(String[] args) {
@@ -20,36 +19,44 @@ public class Solution36 {
     public static int width, length, height;
 
     public static int solution(String[][] map3d) {
-        width = map3d[0][0].length();
-        length = map3d[0].length;
         height = map3d.length;
-
-        visit = new boolean[height][length][width];
+        length = map3d[0].length;
+        width = map3d[0][0].length();
         
+        visit = new boolean[height][length][width];
 
 
-        SimpleDateFormat dateParser = new SimpleDateFormat("yyyy-MM-dd 09:00:00");
-        Date today = new Date();
-        //System.out.println(today);
-        Calendar cal = Calendar.getInstance();
-        cal.setTime(today);
-        cal.add(Calendar.HOUR, 1);
-        System.out.println(dateParser.format(cal.getTime()));
- 
-        //System.out.println(Arrays.deepToString(visit));
-        return bfs(0, 0, 0, map3d);
-
-        //return 1;
+        System.out.println(map3d[1][1].charAt(1));
+        
+        for (int i=0; i<height; i++) {
+            for (int j=0; j<length; j++) {
+                for (int k=0; k<width; k++) {
+                    if (map3d[i][j].charAt(k) == 'S') {
+                        return bfs(0, 0, 0, map3d);
+                    }
+                }
+            }
+        }
+    
+        return 1;
     }
     
     // 최단경로 탐색 문제 => BFS 사용
-    public static int bfs(int x, int y, int h, String[][] map3d){
-        // for (int i=0; i<height; i++) {
-        //     for (int j=0; j<length) {
-        //         for (int k=0;)
-        //     }
-        // }
-        
+    public static int bfs(int h, int y, int x, String[][] map3d){
+        Queue<Node> queue = new LinkedList<>();
+
+        visit[h][y][x] = true;
+        queue.offer(new Node(h, y, x));
+
+        while(!queue.isEmpty()) {
+            Node node = queue.poll();
+
+            
+        }
+
+
+
+
         // Queue<Node> q = new LinkedList<>();
 
         // visit[x][y] = true;
@@ -85,12 +92,12 @@ public class Solution36 {
     }
     
     public static class Node {
-        int x, y, h;
+        int h, y, x;
         
-        public Node(int x, int y, int h) {
-            this.x = x;
+        public Node(int h, int y, int x) {
+            this.x = h;
             this.y = y;
-            this.h = h;
+            this.h = x;
         }
     }
 }
