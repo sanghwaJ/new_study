@@ -9,95 +9,80 @@ public class Solution36 {
     public static void main(String[] args) {
         String[][] map3d = {{"XXXXX","OOSXO","OOXOO"},{"XEOOO","OXXXO","OOOOX"}};
 
-        System.out.println(solution(map3d));    
+        System.out.println(solution1(map3d));    
     }
-
     public static int[] xpos = {1, -1, 0, 0, 0, 0};
     public static int[] ypos = {0, 0, 1, -1, 0, 0};
     public static int[] hpos = {0, 0, 0, 0, 1, -1};
     public static boolean[][][] visit;
     public static int width, length, height;
 
-    public static int solution(String[][] map3d) {
+    public static int solution1(String[][] map3d) {
         height = map3d.length;
         length = map3d[0].length;
         width = map3d[0][0].length();
         
         visit = new boolean[height][length][width];
-
-
-        System.out.println(map3d[1][1].charAt(1));
         
+        return bfs(0, 0, 0, 0, map3d);
+    }
+    
+    // 최단경로 탐색 문제 => BFS 사용
+    public static int bfs(int h, int y, int x, int d, String[][] map3d){
+        Queue<Node> queue = new LinkedList<>();
+
         for (int i=0; i<height; i++) {
             for (int j=0; j<length; j++) {
                 for (int k=0; k<width; k++) {
                     if (map3d[i][j].charAt(k) == 'S') {
-                        return bfs(0, 0, 0, map3d);
-                    }
+                        h = i;
+                        y = j;
+                        x = k;
+                    } 
                 }
             }
         }
-    
-        return 1;
-    }
-    
-    // 최단경로 탐색 문제 => BFS 사용
-    public static int bfs(int h, int y, int x, String[][] map3d){
-        Queue<Node> queue = new LinkedList<>();
 
         visit[h][y][x] = true;
-        queue.offer(new Node(h, y, x));
+        queue.offer(new Node(h, y, x, d));
 
         while(!queue.isEmpty()) {
             Node node = queue.poll();
 
-            
+            for (int i=0; i<6; i++) {
+                int hh = node.h + hpos[i];
+                int yy = node.y + ypos[i];
+                int xx = node.x + xpos[i];
+                int dd = node.d + 1;
+
+                // 범위를 넘어가면 continue
+                if (hh < 0 || hh >= height || yy < 0 || yy >= length || xx < 0 || xx >= width) {
+                    continue;
+                }
+
+                if (!visit[hh][yy][xx]) {
+                    if (map3d[hh][yy].charAt(xx) == 'E') {
+                        return dd;
+                    } else if (map3d[hh][yy].charAt(xx) == 'X') {
+                        continue;
+                    } else if (map3d[hh][yy].charAt(xx) == 'O') {
+                        visit[hh][yy][xx] = true;
+                        queue.offer(new Node(h, y, x, d+1));
+                    }
+                }
+            }
         }
-
-
-
-
-        // Queue<Node> q = new LinkedList<>();
-
-        // visit[x][y] = true;
-        // q.offer(new Node(x, y, 1));
-
-        // while(!q.isEmpty()) {
-        //     Node node = q.poll();
-
-        //     // 목표 지점에 도착하면 cost return
-        //     if (node.x == xLen-1 && node.y == yLen-1) {
-        //         return node.cost;
-        //     }
-            
-        //     for (int i=0; i<4; i++) {
-        //         int xx = node.x + dx[i];
-        //         int yy = node.y + dy[i];
-
-        //         // 좌표 범위를 넘어가면 continue
-        //         if (xx < 0 || xx > xLen-1 || yy < 0 || yy > yLen-1) {
-        //             continue;
-        //         }
-
-        //         // 아직 방문하지 않았거나, 존재하는 길(1)이라면 node 추가
-        //         if (!visit[xx][yy] && maps[xx][yy] == 1) {
-        //             visit[xx][yy] = true;
-        //             q.offer(new Node(xx, yy, node.cost + 1));
-        //         }
-        //     }
-        // }
-        
-        
         return -1;
     }
     
     public static class Node {
-        int h, y, x;
+        int h, y, x, d;
         
-        public Node(int h, int y, int x) {
+        public Node(int h, int y, int x, int d) {
             this.x = h;
             this.y = y;
             this.h = x;
+            this.d = d;
         }
     }
 }
