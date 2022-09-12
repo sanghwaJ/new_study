@@ -10,14 +10,31 @@ public class Solution36 {
         String[][] map3d = {{"XXXXX","OOSXO","OOXOO"},{"XEOOO","OXXXO","OOOOX"}};
 
         System.out.println(solution1(map3d));    
+        System.out.println(solution2(map3d));    
     }
     public static int[] xpos = {1, -1, 0, 0, 0, 0};
     public static int[] ypos = {0, 0, 1, -1, 0, 0};
     public static int[] hpos = {0, 0, 0, 0, 1, -1};
+
+    /* solution 1 start */
+    public static Queue<Dot> q = new LinkedList<>();
+    public static String[][][] map;
+
+    public static int solution1(String[][] map3d) {
+        height = map3d.length;
+        length = map3d[0].length;
+        width = map3d[0][0].length();
+        
+        visit = new boolean[height][length][width];
+        
+        return bfs(0, 0, 0, 0, map3d);
+    }
+
+    /* solution 2 start */
     public static boolean[][][] visit;
     public static int width, length, height;
 
-    public static int solution1(String[][] map3d) {
+    public static int solution2(String[][] map3d) {
         height = map3d.length;
         length = map3d[0].length;
         width = map3d[0][0].length();
@@ -74,7 +91,7 @@ public class Solution36 {
         }
         return -1;
     }
-    
+
     public static class Node {
         int h, y, x, d;
         
@@ -85,4 +102,9 @@ public class Solution36 {
             this.d = d;
         }
     }
+    /* solution 2 end */
+
+    
+    
+    
 }
