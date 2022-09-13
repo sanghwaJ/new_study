@@ -1,17 +1,13 @@
 # Java - Queue & Stack
 
-## 1. Queue
+## 1-1. Queue
 - 가장 먼저 넣은 데이터를 가장 먼저 꺼낼 수 있는 구조 (FIFO)
 
-<br/>
-
-## 2. Queue의 주요 기능
+## 1-2. Queue의 주요 기능
 - Enqueue : 큐에 데이터를 넣는 기능
 - Dequeue : 큐에서 데이터를 꺼내는 기능
 
-<br/>
-
-## 3. Java에서 Queue 사용하기
+## 1-3. Java에서 Queue 사용하기
 - java.util 패키지의 Queue 클래스 사용
 - Enqueue = add(value) OR offer(value)
 - Dequeue = poll() OR remove()
@@ -75,25 +71,20 @@ public static void main(String[] args) {
 } 
 ```
 
-<br/>
-
-## 4. Queue의 사용
+## 1-4. Queue의 사용
 - 멀티태스킹을 위한 프로세스 스케줄링 방식을 구현하기 위해 많이 사용됨
 
-<br/>
+## 1-5. add와 offer의 차이
+- add : Queue에 값을 추가한 경우 
 
-## 5. Stack
+## 2-1. Stack
 - 가장 나중에 쌓은 데이터를 가장 먼저 꺼낼 수 있는 구조 (LIFO)
 
-<br/>
-
-## 6. Stack의 주요 기능
+## 2-2. Stack의 주요 기능
 - push : Stack에 데이터를 넣는 기능
 - pop : Stack에서 데이터를 꺼내는 기능
 
-<br/>
-
-## 7. Java에서 Stack 사용하기
+## 2-3. Java에서 Stack 사용하기
 - java.util 패키지에서 Stack 클래스 사용
 
 ```java
