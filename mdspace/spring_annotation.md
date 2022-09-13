@@ -59,7 +59,7 @@ public class UserController {
 ```
 
 ### 2-6. @RequestMapping
-- @RequestMapping(value=”“)와 같은 형태로 작성하며, 요청 들어온 URI의 요청과 Annotation value 값이 일치하면 해당 Class나 메소드흫 실행 
+- @RequestMapping(value=”“)와 같은 형태로 작성하며, 요청 들어온 URI의 요청과 Annotation value 값이 일치하면 해당 Class나 메소드를 실행 
 - Controller 객체 안의 메서드와 Class에 적용 가능 (Class 단위에 사용하면 하위 메소드에 모두 적용)
 - 메소드에 적용되면 해당 메소드에서 지정한 방식으로 URI를 처리
   

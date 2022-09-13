@@ -2,6 +2,7 @@
 
 ## 1-1. Queue
 - 가장 먼저 넣은 데이터를 가장 먼저 꺼낼 수 있는 구조 (FIFO)
+- 멀티태스킹을 위한 프로세스 스케줄링 방식을 구현하기 위해 많이 사용됨
 
 ## 1-2. Queue의 주요 기능
 - Enqueue : 큐에 데이터를 넣는 기능
@@ -71,11 +72,13 @@ public static void main(String[] args) {
 } 
 ```
 
-## 1-4. Queue의 사용
-- 멀티태스킹을 위한 프로세스 스케줄링 방식을 구현하기 위해 많이 사용됨
+## 1-4. add() VS offer()
+- add() : Queue에 값을 추가한 경우 true를 반환하며, Queue가 가득차서 더이상 추가할 수 없는 경우 IllegalStateException throw
+- offer() : Queue에 값을 추가한 경우 true를 반환하며, Queue가 가득차서 더이상 추가할 수 없는 경우 false 반환(예외 throw를 하지 않음)
 
-## 1-5. add와 offer의 차이
-- add : Queue에 값을 추가한 경우 
+## 1-5. remove() VS poll()
+- remove() : Queue 맨 앞에 있는 값을 반환한 뒤 삭제하며, Queue가 비어있는 경우 NoSuchElementException throw
+- poll() : Queue 맨 앞에 있는 값을 반환한 뒤 삭제하며, Queue가 비어있는 경우 null 반환
 
 ## 2-1. Stack
 - 가장 나중에 쌓은 데이터를 가장 먼저 꺼낼 수 있는 구조 (LIFO)
