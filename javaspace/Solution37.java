@@ -1,65 +1,129 @@
-// sTest2
+// sTest1
 import java.util.*;
 
 public class Solution37 {
     public static void main(String[] args) {
-        String s = "(())()";
+        // 공항 개수
+        int n = 5; 
+        // 목적지 idx(+1)
+        int k = 4; 
+        // {from 공항, to 공항, 시간, 마일리지}
+        int[][] paths = {{1,5,1,1},{1,2,4,3,},{1,3,3,2},{2,5,2,1},{2,4,2,3},{3,4,2,2}};
 
-        System.out.println(solution1(s));   
-        System.out.println(solution2(s));   
+        // 1번 공항에서 k번 공항으로 가는 최단 시간, 최대 마일리지 출력
+        System.out.println(Arrays.toString(solution1(n, k, paths)));
+        System.out.println(Arrays.toString(solution2(n, k, paths)));   
     }
 
-    // stack을 사용하였으나, 시간초과
-    public static boolean solution1(String s) {
-        boolean answer = true;
-        
-        Stack st = new Stack();
+    /* solution 1 start */
+    public static int[] solution1(int n, int k, int[][] paths) {
+        int[] answer = new int[2];
 
-        String[] strArr = s.split("");
-        for (String str : strArr) {
-            if ("(".equals(str)) {
-                st.push(str);
-            } else if (")".equals(str) && !st.isEmpty() && "(".equals(st.peek())){
-                st.pop();
+        if (n==2) {
+            answer[0] = paths[0][2];
+            answer[1] = paths[0][3];
+        }
+        
+        int V = n;
+        //int E = V+1;
+        k = k-1;
+
+        List<Node>[] adj = new ArrayList[n];
+        
+        ArrayList<Node> minNodeList = new ArrayList<>();
+
+        // 공항 개수만큼 인접 리스트 생성
+        for (int i = 0; i < n; i++) {
+            adj[i] = new ArrayList<>();
+        }
+         
+        for (int i = 0; i < paths.length; i++) {
+            int start = paths[i][0];
+            int end = paths[i][1];
+            int weight1 = paths[i][2]; //가중치1
+            int weight2 = paths[i][3]; //가중치2 
+            
+            // 생성한 인접 리스트에 add
+            adj[start-1].add(new Node(end-1, weight1, weight2));
+            adj[end-1].add(new Node(start-1, weight1, weight2));
+        }
+
+        // 다익스트라 알고리즘은 우선순위큐를 사용
+        // 우선순위큐는 큐처럼 FIFO가 아닌 우선순위가 높은 데이터가 먼저 나가는 자료구조
+        PriorityQueue<Node> pq = new PriorityQueue<Node>();
+        boolean[] check = new boolean[V];
+        Node[] N = new Node[V];
+         
+        for (int i = 0; i < V; i++) {
+            // 원하는 출발지
+            if (i == 0) {
+               N[i] = new Node(i, 0, 0);
             } else {
-                answer = false;
-                break;
+               N[i] = new Node(i, Integer.MAX_VALUE, Integer.MAX_VALUE);
             }
+            pq.add(N[i]);
         }
-        
-        if (!st.isEmpty()) {
-            answer = false;
-        }
-        
-        return answer;
-    }
-
-    // stack 사용 개선 함수
-    public static boolean solution2(String s) {
-        boolean answer = true;
-        
-        // 개선점 1 : char 타입 사용
-        Stack<Character> st = new Stack<Character>();
-
-        // 개선점 2 : 문자열을 split()하고 순회하는 것이 아니라, charAt()을 활용하여 바로 순회
-        for (int i=0; i<s.length(); i++) {
-            if(s.charAt(i) == '(') {
-                st.push('(');
-            } else {
-                // 개선점 3 : '('이 아닌 ')'이 들어왔는데, 빈 stack이라면 바로 false return
-                if (st.isEmpty()) {
-                    answer = false;
-                    return answer;
-                } else {
-                    st.pop();
+         
+        while (!pq.isEmpty()) {
+            Node node = pq.poll();
+   
+            for (Node next : adj[node.v]) {
+                // 아직 방문하지 않고, 범위가 넘어가지 않는 
+                if (!check[next.v] && N[next.v].weight1 >= N[node.v].weight1 + next.weight1) {
+                    N[next.v].weight1 = N[node.v].weight1 + next.weight1;
+                    N[next.v].weight2 = N[node.v].weight2 + next.weight2;
+                  
+                    minNodeList.remove(N[next.v]);
+                    minNodeList.add(N[next.v]);
+   
+                    pq.remove(N[next.v]);
+                    pq.add(N[next.v]);
                 }
+               
+            }
+            check[node.v] = true;
+        }
+   
+        for (Node nn : minNodeList) {
+            if((nn.v)==k) {
+                answer[0] = nn.weight1; 
+                answer[1] = nn.weight2;
             }
         }
-        
-        if (!st.isEmpty()) {
-            answer = false;
+   
+        return answer;
+    }
+
+    public static class Node implements Comparable<Node>{
+        int v;
+        int weight1; // 시간
+        int weight2; // 마일리지
+
+        public Node(int v, int weight1, int weight2) {
+           this.v = v;
+           this.weight1 = weight1;
+           this.weight2 = weight2;
         }
+        
+        // 2차원 Array 정렬
+        @Override
+        public int compareTo(Node o) {
+           int result = Integer.compare(this.weight1, o.weight1);
+           
+           if(result == 0) { 
+              result = Integer.compare(this.weight2, o.weight2);
+           }
+
+           return result;
+        }
+    }
+    /* solution 1 end */
+
+    /* solution 2 start */
+    public static int[] solution2(int n, int k, int[][] paths) {
+        int[] answer = new int[2];
         
         return answer;
     }
+    /* solution 2 end */
 }

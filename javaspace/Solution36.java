@@ -31,7 +31,10 @@ public class Solution36 {
             for (int n=0; n<N; n++) {
                 for (int m=0; m<M; m++) {
                     String value = map3d[h][n].charAt(m)+"";
+                    // 어짜피 S의 위치를 찾아야하기 때문에 loop를 돌아야 함
+                    // 이 때 접근하기 편하고 방문한 곳 처리를 위해 map을 만들어 줌
                     if ("S".equals(value)) {
+                        map[h][n][m] = "S";
                         q.add(new Dot(h, n, m, 0));
                     }
                     if ("O".equals(value)) {
@@ -47,6 +50,7 @@ public class Solution36 {
         while(!q.isEmpty()) {
             int qLen = q.size();
 
+            // for문은 있어도 없어도 그만이었을 듯..
             for (int i=0; i<qLen; i++) {
                 Dot dot = q.poll();
                 
@@ -65,15 +69,14 @@ public class Solution36 {
                     if (hh < 0 || hh >= H || yy < 0 || yy >= N || xx < 0 || xx >= M) {
                         continue;
                     }
-                    System.out.println(Arrays.deepToString(map));
+
                     if (map[hh][yy][xx] != null) {
-                        if ("O".equals(map[hh][yy][xx])) {
-                            
+                        if ("E".equals(map[hh][yy][xx])){
+                            return dd;
+                        } else if ("O".equals(map[hh][yy][xx])) {
                             map[hh][yy][xx] = "X";
                             q.add(new Dot(hh, yy, xx, dd));
-                        } else if ("E".equals(map[hh][yy][xx])){
-                            return dd;
-                        }
+                        } 
                     } 
                 }
             }
@@ -85,13 +88,12 @@ public class Solution36 {
         int h, y, x, d;
         
         public Dot(int h, int y, int x, int d) {
-            this.x = h;
+            this.h = h;
             this.y = y;
-            this.h = x;
+            this.x = x;
             this.d = d;
         }
     }
-    
     /* solution 1 end */
 
     /* solution 2 start */
@@ -104,15 +106,8 @@ public class Solution36 {
         width = map3d[0][0].length();
         
         visit = new boolean[height][length][width];
-<<<<<<< HEAD
 
-        return bfs(0, 0, 0, map3d);
-
-        //return 1;
-=======
-        
         return bfs(0, 0, 0, 0, map3d);
->>>>>>> 677c10846e561743b554587548942e4b94d65ea5
     }
     
     // 최단경로 탐색 문제 => BFS 사용
@@ -148,6 +143,7 @@ public class Solution36 {
                     continue;
                 }
 
+                // visit만 만들고 바로 접근
                 if (!visit[hh][yy][xx]) {
                     if (map3d[hh][yy].charAt(xx) == 'E') {
                         return dd;
@@ -155,7 +151,7 @@ public class Solution36 {
                         continue;
                     } else if (map3d[hh][yy].charAt(xx) == 'O') {
                         visit[hh][yy][xx] = true;
-                        queue.offer(new Node(h, y, x, d+1));
+                        queue.offer(new Node(hh, yy, xx, dd));
                     }
                 }
             }
@@ -167,15 +163,11 @@ public class Solution36 {
         int h, y, x, d;
         
         public Node(int h, int y, int x, int d) {
-            this.x = h;
+            this.h = h;
             this.y = y;
-            this.h = x;
+            this.x = x;
             this.d = d;
         }
     }
     /* solution 2 end */
-
-    
-    
-    
 }
