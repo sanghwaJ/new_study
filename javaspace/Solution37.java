@@ -106,15 +106,6 @@ public class Solution37 {
         }
         return answer;
     }
-    /* solution 1 end */
-
-    /* solution 2 start */
-    public static int[] solution2(int n, int k, int[][] paths) {
-        int[] answer = new int[2];
-   
-        return answer;
-    }
-    /* solution 2 end */
 
     public static class Node implements Comparable<Node>{
         int v;
@@ -139,4 +130,13 @@ public class Solution37 {
            return result;
         }
     }
+    /* solution 1 end */
+
+    /* solution 2 start */
+    public static int[] solution2(int n, int k, int[][] paths) {
+        int[] answer = new int[2];
+   
+        return answer;
+    }
+    /* solution 2 end */
 }
