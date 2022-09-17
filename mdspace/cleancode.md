@@ -337,3 +337,4 @@ BufferedOutputStream bos = ctxt.createScartchFileStream(classFileName);
 
 - 즉, 데이터가 아닌 객체를 참고할 때 여러 번의 .을 사용하는 경우, 객체에게 메세지를 보내도록 변경하자.
 
+참고 : https://mangkyu.tistory.com/132
