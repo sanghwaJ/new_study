@@ -65,6 +65,7 @@
 
 ### 📌 기타
 - [프로그래밍 언어 별 특징 (C, C++, Java, Python)](mdspace/languages.md)
+- [Clean Code 핵심 요약(+ SOLID, 리팩토링 등)](mdspace/cleancode.md)
 - [프로그램, 프로세스, 스레드(멀티스레드, 싱글스레드)](mdspace/program,process,thread.md)
 - [라이브러리, 프레임워크, 아키텍처, API](mdspace/libraryAndFrameworkAndEtc.md)
 - [Git Branch 전략](mdspace/gitBranch.md)
