@@ -146,6 +146,8 @@
 - [Codility - TieRopes](javaspace/Solution25.java)
 - [Codility - OddOccurrencesInArray](javaspace/Solution39.java)
 - [Codility - MinMaxDivision](javaspace/Solution40.java)
+- [Codility - Nesting](javaspace/Solution41.java)
+- [Codility - StoneWall](javaspace/Solution42.java)
 
 ### 📌 Python
 - [프로그래머스 - 전화번호 목록](pythonspace/Solution1.ipynb)
