@@ -11,47 +11,47 @@ public class Solution44 {
     }
 
     static boolean[] visitedWords;
+    static int answer = 0;
 
     public static int solution(String begin, String target, String[] words) {
         visitedWords = new boolean[words.length];
 
-        int answer = 0;
-        if (target.contains("target")) {
-            for (int idx=words.length-1; idx<=0; idx--) {
-                if (target.equals(words[idx])) {
-                    answer++;
-                    continue;
-                }
-    
-    
-            }
-        } else {
-            return 0;
+        if (Arrays.asList(words).contains(target)) {
+            dfs(begin, target, words, 0);
         }
-        
+
         return answer;
     }
+    
+    public static void dfs(String nowWord, String target, String[] words, int cnt) {
+        if (nowWord.equals(target)) {
+            answer = cnt;
+            return;
+        }
 
-    public static void dfs(String[] words) {
         for (int i=0; i<words.length; i++) {
+            // 아직 방문하지 않은 경우
             if(!visitedWords[i]) {
-                visitedWords[i] = true;
-                dfs(words);
+                // 한글자만 다르다면 dfs recursive
+                if (charCheck(nowWord, words[i])) {
+                    visitedWords[i] = true;
+                    dfs(words[i], target, words, cnt+1);
+                    visitedWords[i] = false;
+                }
             }
         }
     }
 
-    /*
-    public static void dfs(int k, int[][] dungeons, int cnt) {
-        for (int i = 0; i < dungeons.length; i++) {
-            if (!visit[i] && dungeons[i][0] <= k) {
-                visit[i] = true;
-                dfs(k - dungeons[i][1], dungeons, cnt + 1);
-                visit[i] = false;
+    // 두 단어를 비교해서 1글자만 다른지에 대한 여부 return
+    public static boolean charCheck(String nowWord, String nextWord) {
+        int diffCount = 0;
+
+        for (int i=0; i<nowWord.length(); i++) {
+            if (nowWord.charAt(i) != nextWord.charAt(i)) {
+                diffCount++;
             }
         }
 
-        answer = Math.max(answer, cnt);
+        return diffCount == 1 ? true : false;
     }
-     */
 }
