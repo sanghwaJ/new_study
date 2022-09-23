@@ -19,7 +19,6 @@ public class Solution44 {
         if (Arrays.asList(words).contains(target)) {
             dfs(begin, target, words, 0);
         }
-
         return answer;
     }
     
