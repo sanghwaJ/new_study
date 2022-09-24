@@ -148,7 +148,7 @@
 - [Codility - MinMaxDivision](javaspace/Solution40.java)
 - [Codility - Nesting](javaspace/Solution41.java)
 - [Codility - StoneWall](javaspace/Solution42.java)
-- [Codility - NailingPlanks](javaspace/Solution43.java)
+- [Codility - EquiLeader](javaspace/Solution43.java)
 
 ### 📌 Python
 - [프로그래머스 - 전화번호 목록](pythonspace/Solution1.ipynb)
