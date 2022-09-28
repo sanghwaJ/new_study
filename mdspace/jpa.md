@@ -23,7 +23,7 @@
 - JPA는 내부적으로 JDBC API를 활용하는데, 개발자가 직접 JDBC API를 활용하면 패러다임 불일치, SQL 의존성 등으로 인해 효율성이 떨어지게됨. 이 때, JPA를 활용한다면 모든 SQL에 대해 개발자 대신 JPA가 자동으로 해결해 준다는 점에서 생산성을 크게 높여줌
 
 ### ※ Hibernate
- - ORM 프레임워크 중 가장 많이 사용되는 오픈소스. Hibernate 기반으로 만들어진 ORM 기술 표준이 JPA이며, 즉, JPA라는 ORM 기술 표준을 구현한 것이 Hibernate이므로, JPA를 사용하려면 Hibernate를 사용하면 된다.
+- ORM 프레임워크 중 가장 많이 사용되는 오픈소스. Hibernate 기반으로 만들어진 ORM 기술 표준이 JPA이며, 즉, JPA라는 ORM 기술 표준을 구현한 것이 Hibernate이므로, JPA를 사용하려면 Hibernate를 사용하면 된다.
 
 ### 2-1. JPA의 장점
 - 1차캐시, 쓰기지연, 변경감지, 지연로딩을 제공하여 성능상 이점이 있음
