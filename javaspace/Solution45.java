@@ -19,25 +19,25 @@ public class Solution45 {
         System.out.println(solution(n, wires));   
     }
 
-    public static boolean[] visited;
+    public static int[][] adj;
 
     public static int solution(int n, int[][] wires) {
-        //int answer = Integer.MAX_VALUE;
-        int answer = 1;
-        visited = new boolean[n+1];
-
-        int[][] adj = new int[n+1][n+1];
-        for (int i=0; i<wires.length; i++) {
-            adj[wires[i][0]][wires[i][1]] = 1;
-            adj[wires[i][1]][wires[i][0]] = 1;
+        int answer = Integer.MAX_VALUE;
+        adj = new int[n+1][n+1];
+        for (int idx=0; idx<wires.length; idx++) {
+            adj[wires[idx][0]][wires[idx][1]] = 1;
+            adj[wires[idx][1]][wires[idx][0]] = 1;
         }
 
         for (int idx=0; idx<wires.length; idx++) {
+            // 선 하나를 끊음
             adj[wires[idx][0]][wires[idx][1]] = 0;
             adj[wires[idx][1]][wires[idx][0]] = 0;
 
-            answer = Math.min(answer, bfs(1, adj, answer));
+            // 최소값 갱신
+            answer = Math.min(answer, bfs(n, wires[idx][0]));
 
+            // 끊은 선 복구
             adj[wires[idx][0]][wires[idx][1]] = 1;
             adj[wires[idx][1]][wires[idx][0]] = 1;
         }
@@ -45,40 +45,28 @@ public class Solution45 {
         return answer;
     }
 
-    public static int bfs(int start, int[][] adj, int answer) {
+    public static int bfs(int n, int start) {
+        boolean[] visited = new boolean[n+1];
+
         Queue<Integer> queue = new LinkedList<>();
         queue.offer(start);
 
-        int nodeLen = visited.length;
+        int count = 1;
         while (!queue.isEmpty()) {
             int node = queue.poll();
             visited[node] = true;
 
-            for (int idx=1; idx<nodeLen; idx++) {
+            for (int idx=1; idx<n+1; idx++) {
                 if(!visited[idx]) {
                     if (adj[node][idx] == 1) {
                         queue.offer(idx);
-                        answer++;
+                        count++;
                     }
                 }
             }
         }
         
-        return (int)Math.abs(nodeLen-2 * answer);
+        // 두 group이 가지고 있는 송전탑 갯수의 차
+        return (int)Math.abs(n-2 * count);
     }
-
-    /* 
-    public static int dfs(int start, int[][] wires) {
-        for (int idx=0; )
-
-
-        visited[start] = true;
-
-
-
-
-        return 0;
-
-    }
-    */
 }
