@@ -19,6 +19,19 @@
 - assertTrue(a) : 조건 A가 참인지 확인
 - assertNotNull(a) : 객체 A가 null이 아님을 확인
 
+### ※ 참고
+- 최근 트랜드는 JUnit의 assertXXX보다 AssertJ의 assertThat(actual).isEqualTo(expected)이 가독성이 좋아 더 많이 사용하는 추세
+```java
+// 1. jUnit assertEquals
+assertEquals(expected, actual); 
+
+// 2. asserJ assertThat
+// 실제값이 기대값과 같은지 검증
+assertThat(actual).isEqualTo(expected);
+// 실제값이 기대값과 다른지 검증
+assertThat(actual).isNotEqualTo(expected);
+```
+
 ## 4. 기본 Annotation
 - @Test : 테스트를 만드는 모듈 역할
 - @DisplayName : 테스트 클래스 또는 테스트 메소드의 사용자 정의 표시 이름을 정의
