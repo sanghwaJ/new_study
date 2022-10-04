@@ -35,6 +35,7 @@
 - [Java - JSON](mdspace/java_json.md)
 - [Java - Lambda](mdspace/java_lambda.md)
 - [Java - Stream](mdspace/java_stream.md)
+- [Java - Optional](mdspace/java_optional.md)
 
 ### 📌 Spring
 - [Spring - Spring VS Spring Boot](mdspace/springAndSpringBoot.md)
