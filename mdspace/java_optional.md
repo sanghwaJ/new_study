@@ -234,7 +234,7 @@ public final class Optional<T> {
 }
 ```
 
-### 4-4. Optional.of()
+### 4-2. Optional.of()
 - 값이 절대 null이 아닌 경우 사용하며, 만약 Optional.of()로 null을 저장하려 하면 NPE가 발생함
 
 ```java
@@ -252,7 +252,7 @@ String name = optional.orElse("anonymous"); // 값이 없다면 "anonymous" 를 
 ```
 
 
-### 4-2. orElse() & orElseGet()
+### 4-4. orElse() & orElseGet()
 - orElse()
   - 파라미터로 값을 받음
   - 값이 존재하는 경우에 사용
@@ -466,6 +466,8 @@ Optional<String> nameOpt = Optional.ofNullable(getName());
 String result = nameOpt.orElseThrow(CustomUpperCaseExcpetion::new)
                   .toUpperCase();
 ```
+
+---
 
 참고 1 : https://mangkyu.tistory.com/70
 
