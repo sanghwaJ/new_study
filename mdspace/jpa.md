@@ -1,4 +1,4 @@
-# JPA (Java Persistence API)
+# Java - JPA (Java Persistence API)
 
 ## 1. ORM (Object-Relational Mapping)
 - 어플리케이션 Class와 RDB(Relational DataBase)의 테이블을 매핑하는 것
