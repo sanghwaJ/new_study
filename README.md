@@ -18,8 +18,8 @@
 - [Java - URL Connection & Http URL Connection](mdspace/java_urlConnection.md)
 - [Java - HttpServletRequest & HttpServletResponse](mdspace/java_httpServlet.md)
 - [Java - Multi Thread](mdspace/java_multiThread.md)
-- [JPA](mdspace/jpa.md)
-- [JUnit](mdspace/java_junit.md)
+- [Java - JPA](mdspace/jpa.md)
+- [Java - JUnit](mdspace/java_junit.md)
   
 ### 📌 Java 문법
 - [Java Tips](mdspace/java_tips.md)
@@ -77,7 +77,7 @@
 - [Kafka](mdspace/kafka.md)
 - [Elasticsearch](mdspace/elasticsearch.md)
 - [Redis](mdspace/redis.md)
-
+- [XML vs JSON vs YAML](mdspace/xmlJsonYaml.md)
 
 ### 📌 Data Structure
 - [Java - 배열(Array)](mdspace/java_array.md) 
