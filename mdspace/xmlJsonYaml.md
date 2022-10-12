@@ -1,4 +1,4 @@
-# XML vs JSON vs YAML
+# XML vs JSON vs YAML (+ resources 파일 읽기)
 
 ## 1. XML
 - 데이터를 표현하기 위한 방식으로, HTML과 흡사하게 태그를 사용하며, 트리 계층 구조를 가지고 있음
@@ -76,4 +76,89 @@ users: 
     hobby:      
       - Sing      
       - Dancing
+```
+
+## ※ resources 폴더의 파일 읽기
+
+### 1. ClassLoader 사용
+
+```java
+public class FileReadUsingJava {
+    public static void main(String[] args) throws Exception {
+        URL resource = FileReadUsingJava.class.getClassLoader().getResource("test.txt");
+        List<String> strings = Files.readAllLines(Paths.get(resource.toURI()));
+        strings.forEach(System.out::println);
+
+        //InputStream
+        InputStream inputStream = FileReadUsingJava.class.getClassLoader().getResource("test.txt").openStream();
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
+        bufferedReader.lines().forEach(System.out::println);
+
+        //File로 읽기
+        ClassLoader classLoader = FileReadUsingJava.class.getClassLoader();
+        File file = new File(classLoader.getResource("test.txt").getFile());
+        BufferedReader bufferedReader1 = new BufferedReader(new FileReader(file));
+        bufferedReader1.lines().forEach(System.out::println);
+
+        //Paths 사용
+        String path = FileReadUsingJava.class.getClassLoader().getResource("test.txt").getPath();
+        Stream<String> lines = Files.lines(Paths.get(path));
+        lines.forEach(System.out::println);
+    }
+}
+```
+
+### 2. ClassPathResource 사용
+
+```java
+public class FileReadUsingJava {
+    public static void main(String[] args) throws Exception {
+        ClassPathResource resource = new ClassPathResource("providers.json");
+
+        resource.getFile(); // 파일 객체
+        resource.getFilename(); // 파일 이름
+        resource.getInputStream(); // InputStream 객체
+        resource.getPath(); // 파일 경로
+        resource.getURL(); // URL 객체
+        resource.getURI(); // URI 객체
+
+        // 내용 읽기
+        try {
+            Path path = Paths.get(resource.getURI());
+            List<String> content = Files.readAllLines(path);
+            content.forEach(System.out::println);
+        } catch (Exception e) {
+            log.error(e);
+        }
+
+    }
+}
+```
+
+### 3. ResourceUtils 사용 (Spring에서 사용)
+
+```java
+public class FileReadUsingSpring {
+    public static void main(String[] args) throws Exception {
+        //ResourceUtils
+        File file = ResourceUtils.getFile(ResourceUtils.CLASSPATH_URL_PREFIX + "test.txt");
+        Stream<String> lines = Files.lines(file.toPath());
+        lines.forEach(System.out::println);
+    }
+}
+```
+
+### 4. 기타
+```java
+public class FileRead {
+    public static void main(String[] args) throws Exception {
+        // @Value 사용
+        @Value("classpath:data/resource-data.txt")
+        Resource resourceFile;
+
+        // ResourceLoader 사용 (리소스를 느리게 로드)
+        @Autowired
+        ResourceLoader resourceLoader;
+    }
+}
 ```

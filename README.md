@@ -77,7 +77,7 @@
 - [Kafka](mdspace/kafka.md)
 - [Elasticsearch](mdspace/elasticsearch.md)
 - [Redis](mdspace/redis.md)
-- [XML vs JSON vs YAML](mdspace/xmlJsonYaml.md)
+- [XML vs JSON vs YAML (+ resources 파일 읽기)](mdspace/xmlJsonYaml.md)
 
 ### 📌 Data Structure
 - [Java - 배열(Array)](mdspace/java_array.md) 
