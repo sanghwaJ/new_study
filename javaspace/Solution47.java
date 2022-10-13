@@ -4,7 +4,7 @@ import java.util.*;
 public class Solution47 {
     public static void main(String[] args) {
         String[] genres = {"classic", "pop", "classic", "classic", "pop"};
-        int[] plays = {500, 600, 150, 800, 2500};
+        int[] plays = {500, 600, 500, 800, 2500};
         
         String solution = Arrays.toString(solution(genres, plays));
         System.out.println(solution);   
@@ -13,26 +13,21 @@ public class Solution47 {
     public static int[] solution(String[] genres, int[] plays) {
         int len = genres.length;
         
+        HashMap<String, Integer> genreMap = new HashMap<>();
         Song[] songs = new Song[len];
+        
         for (int i=0; i<len; i++) {
+            if (genreMap.containsKey(genres[i])) {
+                genreMap.put(genres[i], genreMap.get(genres[i]) + plays[i]);
+            } else {
+                genreMap.put(genres[i], plays[i]);
+            }
             songs[i] = new Song(i, genres[i], plays[i]);
         }
+
+        System.out.println(genreMap.toString());
         Arrays.sort(songs);
 
-        /*
-        Arrays.sort(songs, new Comparator<int[]>() {
-             @Override
-             public int compare(int[] s1, int[] s2) {
-                 if (s1[0]==s1[0]){
-                    return s1[0]-s1[0];
-                 }
-                 else{
-                    return s1.play-s2.play;
-                 }
-             }
-        });
-         */
-        
         for (int i=0; i<len; i++) {
             System.out.println(songs[i].idx + " " + songs[i].genre + " " + songs[i].play);
         }
@@ -55,23 +50,14 @@ public class Solution47 {
         }
 
         // 오버라이딩 후 Arrays.sort를 사용하면 됨
+        // 즉, 아래의 메소드는 Arrays.sort의 compareTo 기능을 오버라이딩하여 재정의한 것
         @Override
         public int compareTo(Song s) {
-            return this.play - s.play;
-        }
-
-        // 2차원 Array 정렬
-        /* 
-        @Override
-        public int compareTo(Node o) {
-           int result = Integer.compare(this.weight1, o.weight1);
-           
-            if(result == 0) { 
-                result = Integer.compare(this.weight2, o.weight2);
+            if (this.play != s.play) {
+                return this.play - s.play;
+            } else {
+                return this.idx - s.idx;
             }
-
-           return result;
         }
-        */
     }
 }
