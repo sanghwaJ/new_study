@@ -1,4 +1,4 @@
-// 프로그래머스 - 베스트 앨범
+// 프로그래머스 - 베스트 앨범 => 개발중
 import java.util.*;
 
 public class Solution47 {
@@ -25,6 +25,7 @@ public class Solution47 {
             songs[i] = new Song(i, genres[i], plays[i]);
         }
 
+        
         System.out.println(genreMap.toString());
         Arrays.sort(songs);
 
@@ -54,7 +55,7 @@ public class Solution47 {
         @Override
         public int compareTo(Song s) {
             if (this.play != s.play) {
-                return this.play - s.play;
+                return s.play - this.play;
             } else {
                 return this.idx - s.idx;
             }
