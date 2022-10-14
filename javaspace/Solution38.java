@@ -18,7 +18,7 @@ public class Solution38 {
         yLen = maps[0].length;
 
         visit = new boolean[xLen][yLen];
-        System.out.println(Arrays.deepToString(visit));
+        
         return bfs(0, 0, maps);
     }
 
