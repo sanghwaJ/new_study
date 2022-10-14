@@ -1,4 +1,5 @@
-// 프로그래머스 - 베스트 앨범 => 개발중
+// 프로그래머스 - 베스트 앨범
+import java.lang.reflect.Array;
 import java.util.*;
 
 public class Solution47 {
@@ -14,8 +15,7 @@ public class Solution47 {
         int len = genres.length;
         
         HashMap<String, Integer> genreMap = new HashMap<>();
-        Song[] songs = new Song[len];
-        
+        Song[] songs = new Song[len];   
         for (int i=0; i<len; i++) {
             if (genreMap.containsKey(genres[i])) {
                 genreMap.put(genres[i], genreMap.get(genres[i]) + plays[i]);
@@ -24,19 +24,36 @@ public class Solution47 {
             }
             songs[i] = new Song(i, genres[i], plays[i]);
         }
-
-        
-        System.out.println(genreMap.toString());
         Arrays.sort(songs);
 
-        for (int i=0; i<len; i++) {
-            System.out.println(songs[i].idx + " " + songs[i].genre + " " + songs[i].play);
+        ArrayList<String> orderedGenres = new ArrayList<>();
+        while(genreMap.size() != 0) {
+            int maxPlay = 0;
+            String maxGenre = "";
+            for (String key : genreMap.keySet()) {
+                int tempPlay = genreMap.get(key);
+                if (tempPlay > maxPlay) {
+                    maxPlay = tempPlay;
+                    maxGenre = key;
+                }
+            }
+            orderedGenres.add(maxGenre);
+            genreMap.remove(maxGenre);
         }
-       
         
+        ArrayList<Integer> answer = new ArrayList<>();
+        for (String og : orderedGenres) {
+            int cnt = 0;
+            for (Song song : songs) {
+                if (og.equals(song.genre)) {
+                    answer.add(song.idx);
+                    cnt += 1;
+                    if (cnt == 2) break;
+                }
+            }
+        }
         
-        int[] answer = {};
-        return answer;
+        return answer.stream().mapToInt(i->i).toArray();
     }
 
     public static class Song implements Comparable<Song> {
