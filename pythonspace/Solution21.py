@@ -4,6 +4,7 @@ def solution(maps):
     answer = 0
     return answer
 
+# 최단경로 탐색 문제 => DFS 사용
 def bfs(x, y, maps):
     
     

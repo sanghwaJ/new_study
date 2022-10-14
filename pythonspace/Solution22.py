@@ -2,8 +2,6 @@
 
 from collections import deque
 
-# BOJ - DFS와 BFS
-
 # dfs를 재귀함수로 구현
 def dfs(v):
     print(v, end = ' ')

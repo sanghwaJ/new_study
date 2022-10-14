@@ -164,6 +164,7 @@
 - [프로그래머스 - 베스트 앨범](pythonspace/Solution19.py)
 - [BOJ - 2480 주사위세개](pythonspace/Solution2.py)
 - [BOJ - 2484 주사위네개](pythonspace/Solution3.py)
+- [BOJ - 1260 DFS와 BFS](pythonspace/Solution22.py)
 - [Softeer - 전광판](pythonspace/Solution4.py)
 - [Softeer - 택배 마스터 광우](pythonspace/Solution5.py)
 - [Softeer - 회의실 예약 (1)](pythonspace/Solution6-1.py)
