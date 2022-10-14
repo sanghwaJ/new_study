@@ -160,6 +160,8 @@
 ### 📌 Python
 - [프로그래머스 - 전화번호 목록](pythonspace/Solution1.py)
 - [프로그래머스 - 카펫](pythonspace/Solution13.py)
+- [프로그래머스 - JadenCase 문자열 만들기](pythonspace/Solution20.py)
+- [프로그래머스 - 베스트 앨범](pythonspace/Solution19.py)
 - [BOJ - 2480 주사위세개](pythonspace/Solution2.py)
 - [BOJ - 2484 주사위네개](pythonspace/Solution3.py)
 - [Softeer - 전광판](pythonspace/Solution4.py)
