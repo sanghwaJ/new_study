@@ -38,6 +38,7 @@
 - [Java - Stream](mdspace/java_stream.md)
 - [Java - for-loop vs Stream (+ forEach)](mdspace/java_forLoopAndStream.md)
 - [Java - Optional](mdspace/java_optional.md)
+- [Java - Generic](mdspace/java_generic.md)
 
 ### 📌 Spring
 - [Spring - Spring VS Spring Boot](mdspace/springAndSpringBoot.md)
