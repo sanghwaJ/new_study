@@ -34,9 +34,9 @@ package Generic1;
 
 public class man <T> {
 	//이름 필드
-  private T name;
+	private T name;
 	
-  //혈액형 필드
+	//혈액형 필드
 	private T bloodtype;
 	
 	public T getName() {
@@ -62,7 +62,6 @@ package Generic1;
 public class mainGe {
 
 	public static void main(String[] args) {
-		
 		man<String> man1 = new man<>();
 		//새로운 객체 생성시 원하는 타입을 부여
 		
@@ -83,30 +82,30 @@ package Generic1;
 
 public class man <T, T2> {
 	//이름 필드
-  private T name;
+	private T name;
 	//혈액형 필드
-  private T bloodtype;
+	private T bloodtype;
 	
-  private T2 age;
+	private T2 age;
 	
-  public T getName() {
-    return name;
-  }
-  public void setName(T name) {
-    this.name = name;
-  }
-  public T getBloodtype() {
-    return bloodtype;
-  }
-  public void setBloodtype(T bloodtype) {
-    this.bloodtype = bloodtype;
-  }
-  public T2 getAge() {
-    return age;
-  }
-  public void setAge(T2 age) {
-    this.age = age;
-  }
+	public T getName() {
+		return name;
+	}
+	public void setName(T name) {
+    	this.name = name;
+	}
+	public T getBloodtype() {
+    	return bloodtype;
+	}
+	public void setBloodtype(T bloodtype) {
+    	this.bloodtype = bloodtype;
+	}
+	public T2 getAge() {
+    	return age;
+	}
+	public void setAge(T2 age) {
+    	this.age = age;
+	}
 }
 ```
 
