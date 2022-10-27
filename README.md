@@ -165,7 +165,7 @@
 - [프로그래머스 - 카펫](pythonspace/Solution13.py)
 - [프로그래머스 - JadenCase 문자열 만들기](pythonspace/Solution20.py)
 - [프로그래머스 - 베스트 앨범](pythonspace/Solution19.py)
-- [프로그래머스 - 게임 맵 최단거리](pythonspace/Solution22.py)
+- [프로그래머스 - 게임 맵 최단거리](pythonspace/Solution21.py)
 - [BOJ - 2480 주사위세개](pythonspace/Solution2.py)
 - [BOJ - 2484 주사위네개](pythonspace/Solution3.py)
 - [BOJ - 1260 DFS와 BFS](pythonspace/Solution22.py)
