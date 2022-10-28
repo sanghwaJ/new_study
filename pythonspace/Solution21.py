@@ -1,4 +1,4 @@
-# 프로그래머스 - 게임 맵 최단거리 => 개발중 => 다시풀어보기
+# 프로그래머스 - 게임 맵 최단거리
 
 from collections import deque
 
@@ -7,24 +7,22 @@ def solution(maps):
     xLen = len(maps)
     global yLen
     yLen = len(maps[0])
-    global dx
-    dx = [0,1,0,-1]
-    global dy
-    dy = [1,0,-1,0]
     
     visited = [[False] * (yLen) for i in range(xLen)]
     
-    bfs(0, 0, maps, visited)
-
     return bfs(0, 0, maps, visited)
 
 # 최단경로 탐색 문제 => BFS 사용
 def bfs(x, y, maps, visited):
+    dx = [0,1,0,-1]
+    dy = [1,0,-1,0]
+    
     queue = deque()
+    
     queue.appendleft(Node(x, y, 1))
     visited[x][y] = True
     
-    while queue:
+    while len(queue) != 0:
         node = queue.popleft()
         
         if node.x == xLen-1 and node.y == yLen-1:
@@ -39,9 +37,9 @@ def bfs(x, y, maps, visited):
             
             if visited[xx][yy] == False and maps[xx][yy] == 1:
                 visited[xx][yy] = True
-                queue.appendleft(Node(xx, yy, node.cost + 1))
+                queue.append(Node(xx, yy, node.cost + 1))
                 
-        return -1
+    return -1
 
 class Node:
     def __init__(self, x, y, cost):
