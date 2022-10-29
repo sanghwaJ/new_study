@@ -37,6 +37,7 @@ def bfs(x, y, maps, visited):
             
             if visited[xx][yy] == False and maps[xx][yy] == 1:
                 visited[xx][yy] = True
+                # 주의! 큐 구현시 appendLeft가 아닌 append 사용
                 queue.append(Node(xx, yy, node.cost + 1))
                 
     return -1
