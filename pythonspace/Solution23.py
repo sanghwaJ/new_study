@@ -1,45 +1,46 @@
-# 1260번 DFS와 BFS
-from collections import deque
+# 프로그래머스 - 아이템 줍기
+def solution(rectangle, characterX, characterY, itemX, itemY):
+    # 2차원 리스트 정렬???
+    #rectangle = sorted(rectangle, key=lambda x : (-x[0], -x[1]))
+    
+    #print (rectangle)
+    
+    dotList = []
+    for i in range(len(rectangle)):
+        dot1 = [rectangle[i][0], rectangle[i][1]]
+        dot2 = [rectangle[i][0], rectangle[i][3]]
+        dot3 = [rectangle[i][2], rectangle[i][1]]
+        dot4 = [rectangle[i][2], rectangle[i][3]]
+        
+        dotList.append(dot1)
+        dotList.append(dot2)
+        dotList.append(dot3)
+        dotList.append(dot4)
+        
+    print(dotList)
+        
+        
+    
+    answer = 0
+    return answer
 
-# dfs를 재귀함수로 구현
-def dfs(v):
-    print(v, end = ' ')
-    visited[v] = True
-    for e in adj[v]:
-        # 방문하지 않았다면(False)
-        if not visited[e]:
-            dfs(e)
 
-def bfs(v):
-    q = deque([v])
-    while q:
-        v = q.popleft()
-        if not visited[v]:
-            visited[v] = True
-            print(v, end = ' ')
-            for e in adj[v]:
-                # 방문하지 않았다면(False)
-                if not visited[e]:
-                    q.append(e)
+# 정답
+rectangle = [[[1,1,7,4],[3,2,5,5],[4,3,6,9],[2,6,8,8]],
+             [[1,1,8,4],[2,2,4,9],[3,6,9,8],[6,3,7,7]],
+             [[1,1,5,7]],
+             [[2,1,7,5],[6,4,10,10]],
+             [[2,2,5,5],[1,3,6,4],[3,1,4,6]]]
+characterX = [1, 9, 1, 3, 1]
+characterY = [3, 7, 1, 1, 4]
+itemX = [7, 6, 4, 7, 6]
+itemY = [8, 1, 7, 10, 3]
+answer = [17, 11, 9, 15, 10]
 
-n, m, v = map(int, input().split())
-
-# 인접 리스트 : 인접된 정점들을 묶은 리스트
-# n + 1만큼 반복문을 돌리는 이유는 리스트 인덱스가 0부터 시작하기 때문
-adj = [[] for _ in range(n + 1)]
-
-for _ in range(m):
-    x, y = map(int, input().split())
-    adj[x].append(y)
-    adj[y].append(x)
-
-# 정점 번호가 작은 것 부터 방문하기 때문에, 정점 정렬
-for e in adj:
-    e.sort()
-
-# 한 번 방문한 정점은 다시 방문하지 않도록 visited로 관리
-visited = [False] * (n + 1)
-dfs(v)
-print()
-visited = [False] * (n + 1)
-bfs(v)
+for i in range(len(rectangle)):
+    sol = solution(rectangle[i], characterX[i], characterY[i], itemX[i], itemY[i])
+    print(sol)
+    if (sol == answer[i]):
+        print("정답")
+    else:
+        print("오답")

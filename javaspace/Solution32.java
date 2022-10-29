@@ -21,12 +21,6 @@ public class Solution32 {
                 maxH = Math.max(sizes[i][1], maxH);
             }
         }
-        
-        String test = "helloworld";
-
-        for (int i=0; i<test.length(); i++) {
-            System.out.println(test.charAt(i));
-        }
 
         return maxW * maxH;
     }
