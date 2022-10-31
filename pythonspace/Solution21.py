@@ -1,5 +1,4 @@
 # 프로그래머스 - 게임 맵 최단거리
-
 from collections import deque
 
 def solution(maps):
@@ -19,7 +18,7 @@ def bfs(x, y, maps, visited):
     
     queue = deque()
     
-    queue.appendleft(Node(x, y, 1))
+    queue.append(Node(x, y, 1))
     visited[x][y] = True
     
     while len(queue) != 0:
@@ -37,7 +36,7 @@ def bfs(x, y, maps, visited):
             
             if visited[xx][yy] == False and maps[xx][yy] == 1:
                 visited[xx][yy] = True
-                # 주의! 큐 구현시 appendLeft가 아닌 append 사용
+                # 주의! 큐 구현시 append + popleft OR appendleft + pop 조합에 맞게 사용 (FIFO)
                 queue.append(Node(xx, yy, node.cost + 1))
                 
     return -1
