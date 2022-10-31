@@ -167,6 +167,8 @@
 - [프로그래머스 - 베스트 앨범](pythonspace/Solution19.py)
 - [프로그래머스 - 게임 맵 최단거리](pythonspace/Solution21.py)
 - [프로그래머스 - 아이템 줍기](pythonspace/Solution23.py)
+- [프로그래머스 - 타겟넘버](pythonspace/Solution24.py)
+- [프로그래머스 - 네트워크](pythonspace/Solution25.py)
 - [BOJ - 2480 주사위세개](pythonspace/Solution2.py)
 - [BOJ - 2484 주사위네개](pythonspace/Solution3.py)
 - [BOJ - 1260 DFS와 BFS](pythonspace/Solution22.py)

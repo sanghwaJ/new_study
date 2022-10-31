@@ -1,5 +1,4 @@
 # 프로그래머스 - 아이템 줍기
-from cmath import rect
 from collections import deque
 
 def solution(rectangle, characterX, characterY, itemX, itemY):
