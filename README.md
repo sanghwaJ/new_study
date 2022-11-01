@@ -169,6 +169,8 @@
 - [프로그래머스 - 아이템 줍기](pythonspace/Solution23.py)
 - [프로그래머스 - 타겟넘버](pythonspace/Solution24.py)
 - [프로그래머스 - 네트워크](pythonspace/Solution25.py)
+- [프로그래머스 - 위장](pythonspace/Solution26.py)
+- [프로그래머스 - 캐시](pythonspace/Solution27.py)
 - [BOJ - 2480 주사위세개](pythonspace/Solution2.py)
 - [BOJ - 2484 주사위네개](pythonspace/Solution3.py)
 - [BOJ - 1260 DFS와 BFS](pythonspace/Solution22.py)
