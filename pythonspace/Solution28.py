@@ -23,4 +23,3 @@ def solution(msg):
     answer.append(alphaDict[divMsg])
             
     return answer
-    
