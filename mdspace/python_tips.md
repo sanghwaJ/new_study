@@ -168,7 +168,7 @@ print(a.values()) # dict_values(['pey', '0119993323', '1118'])
 # 4-3. items() : 딕셔너리의 key와 value 쌍을 튜플로 묶어 리스트를 리턴
 a = {'name': 'pey', 'phone': '0119993323', 'birth': '1118'}
 
-print(a.values()) # dict_items([('name', 'pey'), ('phone', '0119993323'), ('birth', '1118')])
+print(a.items()) # dict_items([('name', 'pey'), ('phone', '0119993323'), ('birth', '1118')])
 ```
 
 ```python
