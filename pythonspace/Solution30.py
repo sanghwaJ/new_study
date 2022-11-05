@@ -1,13 +1,23 @@
-# 프로그래머스 - 2 x n 타일링
+# 프로그래머스 - 피보나치 수
 
-def solution(n):
-    garo = 2
-    sero = 1
+# 점화식 이용 => Fail
+def solution1(n):
+    fiboList = [0, 1]
     
+    if n > 1:
+        for i in range(n-1):
+            fiboList.append(fiboList[i] + fiboList[i+1])
+        
+    return fiboList[n] % 1234567
     
-    answer = 0
-    return answer
+# 파이썬 style 풀이
+def solution2(n):
+    a, b = 0, 1
+    for i in range(n):
+        a, b = b, a + b
     
-n = 4
+    return a % 1234567
 
-print(solution(n))
+n = 1000
+print(solution1(n))
+print(solution2(n))
