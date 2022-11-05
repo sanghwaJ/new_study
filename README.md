@@ -175,6 +175,7 @@
 - [프로그래머스 - 파일명 정렬](pythonspace/Solution29.py)
 - [프로그래머스 - 피보나치 수](pythonspace/Solution30.py)
 - [프로그래머스 - 2 x n 타일링](pythonspace/Solution31.py)
+- [프로그래머스 - 올바른 괄호](pythonspace/Solution32.py)
 - [BOJ - 2480 주사위세개](pythonspace/Solution2.py)
 - [BOJ - 2484 주사위네개](pythonspace/Solution3.py)
 - [BOJ - 1260 DFS와 BFS](pythonspace/Solution22.py)
