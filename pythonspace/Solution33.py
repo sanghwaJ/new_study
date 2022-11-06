@@ -8,7 +8,7 @@ def solution(times, n):
     
     time = 0
     car.append([timesDq.popleft(), time])
-    while True:
+    while car:
         time += 1
         for i in range(len(car)):
             car[i][0] -= 1
@@ -18,8 +18,6 @@ def solution(times, n):
                 break
         if len(car) < n and timesDq:
             car.append([timesDq.popleft(), time])
-        if len(car) == 0:
-            break
     return time
 
 times = [4, 2, 1]
