@@ -1,4 +1,4 @@
-# KB TEST
+# 221106 TEST
 from collections import deque
 
 def solution(times, n):
