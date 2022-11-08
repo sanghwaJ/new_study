@@ -1,4 +1,4 @@
-// 프로그래머스 - 압축 => 풀이 필요
+// 프로그래머스 - 압축
 import java.util.*;
 
 public class Solution48 {

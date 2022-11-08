@@ -133,6 +133,7 @@
 - [프로그래머스 - 전력망을 둘로 나누기](javaspace/Solution45.java)
 - [프로그래머스 - JadenCase 문자열 만들기](javaspace/Solution46.java)
 - [프로그래머스 - 베스트 앨범](javaspace/Solution47.java)
+- [프로그래머스 - 압축](javaspace/Solution48.java)
 - [BOJ - 1541 잃어버린 괄호](javaspace/Solution1.java)
 - [BOJ - 2480 주사위세개](javaspace/Solution6.java)
 - [BOJ - 2484 주사위네개](javaspace/Solution7.java)
