@@ -4,7 +4,7 @@ import java.util.*;
 public class Solution48 {
     public static void main(String[] args) {
         String[] msgList = {"KAKAO", "TOBEORNOTTOBEORTOBEORNOT", "ABABABABABABABAB"};
-        int[][] answerList = {{1, 1, 27, 15}, {20, 15, 2, 5, 15, 18, 14, 15, 20, 27, 29, 31, 36, 30, 32, 34}, {1, 2, 27, 29, 28, 31, 30}};
+        // int[][] answerList = {{1, 1, 27, 15}, {20, 15, 2, 5, 15, 18, 14, 15, 20, 27, 29, 31, 36, 30, 32, 34}, {1, 2, 27, 29, 28, 31, 30}};
         
         for (String msg : msgList) {
             System.out.println(Arrays.toString(solution(msg)));   
@@ -13,8 +13,8 @@ public class Solution48 {
 
     public static int[] solution(String msg) {
         HashMap<String, Integer> alphaMap = new HashMap<>();
-        for (int i=65; i<65+26; i++) {
-            char alphabet = (char) i;
+        for (int i=1; i<27; i++) {
+            char alphabet = (char) (64+i);
             alphaMap.put(Character.toString(alphabet), i);
         }
 
@@ -37,7 +37,7 @@ public class Solution48 {
             }
         }
         answer.add(alphaMap.get(divMsg));
-
+        System.out.println(alphaMap.toString());
         return answer.stream().mapToInt(i->i).toArray();
     }
 }
