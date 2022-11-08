@@ -9,6 +9,13 @@
             "name": "Launch Solution48",
             "request": "launch",
             "mainClass": "Solution48",
+            "projectName": "new_study_7c0543dd"
+        },
+        {
+            "type": "java",
+            "name": "Launch Solution48",
+            "request": "launch",
+            "mainClass": "Solution48",
             "projectName": "new_study_89d54c8"
         },
         {

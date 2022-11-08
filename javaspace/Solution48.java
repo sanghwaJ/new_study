@@ -22,7 +22,6 @@ public class Solution48 {
         int startIdx = 0;
         int endIdx = 1;
         String divMsg = "";
-
         ArrayList<Integer> answer = new ArrayList<>();
         
         while (endIdx < msg.length() + 1) {
@@ -37,7 +36,7 @@ public class Solution48 {
             }
         }
         answer.add(alphaMap.get(divMsg));
-        System.out.println(alphaMap.toString());
+
         return answer.stream().mapToInt(i->i).toArray();
     }
 }
