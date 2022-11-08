@@ -23,3 +23,5 @@ def solution(msg):
     answer.append(alphaDict[divMsg])
             
     return answer
+msg = "TOBEORNOTTOBEORTOBEORNOT"
+print(solution(msg))

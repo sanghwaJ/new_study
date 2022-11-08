@@ -1,5 +1,4 @@
 // 프로그래머스 - 베스트 앨범
-import java.lang.reflect.Array;
 import java.util.*;
 
 public class Solution47 {

@@ -5,6 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "Launch Solution48",
+            "request": "launch",
+            "mainClass": "Solution48",
+            "projectName": "new_study_89d54c8"
+        },
+        {
             "name": "Python: Current File",
             "type": "python",
             "request": "launch",
