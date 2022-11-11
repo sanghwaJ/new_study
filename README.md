@@ -20,6 +20,7 @@
 - [Java - HttpServletRequest & HttpServletResponse](mdspace/java_httpServlet.md)
 - [Java - Multi Thread](mdspace/java_multiThread.md)
 - [Java - JPA](mdspace/jpa.md)
+- [Java - JPA Annotation 정리](mdspace/jpa_annotation.md)
 - [Java - JUnit](mdspace/java_junit.md)
   
 ### 📌 Java 문법
