@@ -26,7 +26,26 @@ public class Solution50 {
     }
 
     public static int solution(int cacheSize, String[] cities) {
+        ArrayList<String> cache = new ArrayList<>();
+
         int answer = 0;
+        for (String city : cities) {
+            city = city.toLowerCase();
+            if (cache.contains(city)) {
+                answer++;
+                cache.remove(cache.indexOf(city));
+                cache.add(city);
+            } else {
+                answer += 5;
+                if (cache.size() < cacheSize) {
+                    cache.add(city);
+                } else if (cacheSize != 0 && cache.size() == cacheSize) {
+                    cache.remove(0);
+                    cache.add(city);
+                }
+            }
+        }
+
         return answer;
     }
 }
