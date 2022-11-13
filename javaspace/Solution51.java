@@ -4,7 +4,7 @@ import java.util.*;
 public class Solution51 {
     public static void main(String[] args) {
         int[][] orderList = {{4, 3, 1, 2, 5}, {5, 4, 3, 2, 1}};
-        int[] answerList = {50, 21, 60, 52, 16, 25};
+        int[] answerList = {2, 5};
         
         
         for (int i=0; i<orderList.length; i++) {
@@ -20,5 +20,6 @@ public class Solution51 {
     public static int solution(int[] order) {
         int answer = 0;
         return answer;
+
     }
 }
