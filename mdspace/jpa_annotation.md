@@ -1,4 +1,4 @@
-# Java - JPA Annotation 정리
+# JPA Annotation 정리
 
 ## 1. 객체와 테이블 매핑
 

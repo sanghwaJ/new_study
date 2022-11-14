@@ -19,8 +19,6 @@
 - [Java - URL Connection & Http URL Connection](mdspace/java_urlConnection.md)
 - [Java - HttpServletRequest & HttpServletResponse](mdspace/java_httpServlet.md)
 - [Java - Multi Thread](mdspace/java_multiThread.md)
-- [Java - JPA](mdspace/jpa.md)
-- [Java - JPA Annotation 정리](mdspace/jpa_annotation.md)
 - [Java - JUnit](mdspace/java_junit.md)
   
 ### 📌 Java 문법
@@ -56,6 +54,21 @@
 - [WebSocket](mdspace/websocket.md)
 - [OAuth 2.0 (+ JWT)](mdspace/oauth.md)
 
+### 📌 Server
+- [Linux - 프로세스 종료](mdspace/linux1.md)
+- [Linux - SSH 접속 시 시간 지연 문제 (+ ntp 시간 동기화)](mdspace/linux2.md)
+- [Linux - Java 버전 관리](mdspace/linux3.md)
+- [Container & Docker](mdspace/docker.md)
+- [Kubernates (vs Docker)](mdspace/kubernates.md)
+
+### 📌 Database
+- [Query 최적화](mdspace/query.md)
+- [트랜잭션 격리 수준 (Transaction Isolation Level)](mdspace/transaction.md)
+- [ORM](mdspace/orm.md)
+- [JPA](mdspace/jpa1.md)
+- [JPA 관련 개념 정리 - JPA(+ JPQL), QueryDSL, Spring Data JPA, Hibernate, 지연로딩, 즉시로딩](mdspace/jpa2.md)
+- [JPA Annotation 정리](mdspace/jpa_annotation.md)
+
 ### 📌 JavaScript & HTML
 - [JavaScript - 실행 모델 (Event Loop, Call Stack, Run-to-completion, Callback Queue, Offloading)](mdspace/js_basic1.md)
 - [JavaScript - Hoisting, Scope, Closure](mdspace/js_basic2.md)
@@ -82,6 +95,10 @@
 - [Redis](mdspace/redis.md)
 - [XML vs JSON vs YAML (+ resources 파일 읽기)](mdspace/xmlJsonYaml.md)
 
+---
+
+## 📚 Data Structure & Algorithm
+
 ### 📌 Data Structure
 - [Java - 배열(Array)](mdspace/java_array.md) 
 - [Java - Queue & Stack](mdspace/java_queueAndStack.md)
@@ -97,21 +114,6 @@
 - [순차탐색 (Sequential Search)](mdspace/algo_seqSearch.md)
 - [그래프 (Graph)](mdspace/algo_graph.md)
 - [너비 우선 탐색 (BFS) & 깊이 우선 탐색 (DFS)](mdspace/algo_bfsDfs.md)
-
----
-
-## 🗄 Infra
-
-### 📌 Server
-- [Linux - 프로세스 종료](mdspace/linux1.md)
-- [Linux - SSH 접속 시 시간 지연 문제 (+ ntp 시간 동기화)](mdspace/linux2.md)
-- [Container & Docker](mdspace/docker.md)
-- [Kubernates (vs Docker)](mdspace/kubernates.md)
-
-### 📌 Database
-- [Query 최적화](mdspace/query.md)
-- [트랜잭션 격리 수준 (Transaction Isolation Level)](mdspace/transaction.md)
-- [ORM](mdspace/orm.md)
 
 ---
 
