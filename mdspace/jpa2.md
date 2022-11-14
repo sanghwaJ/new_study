@@ -9,11 +9,11 @@
 - JPA의 구현체는 Hibernate로, EntityManager와 같은 인터페이스를 직접 구현한 라이브러리
 - JPA와 Hibernate는 자바의 인터페이스와 해당 인터페이스를 구현한 class와 같은 관계
 
-## 3. JPQL
+## 3. JPQL (정적 쿼리)
 - JPA는 JQPL, QueryDSL, JDBC, SpringJDBC 등을 지원함
 - 이 중, JPQL은 Java Persistence Query Language의 약자로 엔티티 객체를 대상으로 쿼리함 (반대로, SQL은 데이터베이스 테이블을 대상으로 쿼리함)
 
-## 4. QueryDSL
+## 4. QueryDSL (동적 쿼리)
 - JPQL을 자바 코드로 작성할 수 있도록 도와주는 Builder API
 - 즉, QueryDSL로 작성한 코드는 JPQL을 실행시킴
 - QueryDSL은 문자가 아닌 코드로 컴파일 시점에 문법 오류를 발견할 수 있다는 큰 장점이 있음
