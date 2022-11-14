@@ -4,7 +4,7 @@ import java.lang.Math;
 // Codility - nTest1
 public class Solution26 {
     public static void main(String[] args) {
-        int[] A = {5112,7311,1427,4112,2141,2151};
+        int[] A = {5112,7311,1427,4112,2141,2151,1232};
         //int[] A = {51,71,17,42};
         //int[] A = {42,33,60};
         System.out.println(solution(A));        
@@ -23,15 +23,13 @@ public class Solution26 {
         
         // map 생성
         HashMap<Integer, Integer> map = new HashMap<>();
-        int tempVal = 0;
         for (int i=0; i<A.length; i++) {
-            tempVal = digitsSum(sortA[i]);
-            map.put(sortA[i], tempVal);
+            map.put(sortA[i], digitsSum(sortA[i]));
         }
 
         // value로 정렬된 list map 생성
         List<Map.Entry<Integer, Integer>> entryList = new ArrayList<>(map.entrySet());
-        entryList.sort(((o1, o2) -> map.get(o1.getKey()) - map.get(o2.getKey())));
+        entryList.sort((o1, o2) -> map.get(o1.getKey()) - map.get(o2.getKey()));
         
         // logic start
         int tempAns = 0;

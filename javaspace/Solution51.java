@@ -18,7 +18,41 @@ public class Solution51 {
     }
 
     public static int solution(int[] order) {
+        Queue<Integer> orderQueue = new LinkedList<>();
+        Stack<Integer> orderStack = new Stack<>();
+        
         int answer = 0;
+        int targetIdx = 1;
+        int idx = 0;
+        while (true) {
+            orderQueue.offer(order[idx]);
+
+            if (orderQueue.peek() == targetIdx) {
+                orderQueue.poll();
+                answer++;
+                targetIdx++;
+                idx++;
+            } else {
+                orderStack.add(orderQueue.poll());
+                idx++;
+                continue;
+            }
+
+            if (orderStack.size() > 0) {
+                if (orderStack.peek() == targetIdx) {
+                    orderStack.pop();
+                    answer++;
+                    targetIdx++;
+                }
+
+                if (orderQueue.peek() == targetIdx && orderStack.peek() == targetIdx) {
+                    break;
+                }
+            }
+
+            
+        }
+
         return answer;
 
     }
