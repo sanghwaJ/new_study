@@ -57,7 +57,7 @@
 ### 📌 Server
 - [Linux - 프로세스 종료](mdspace/linux1.md)
 - [Linux - SSH 접속 시 시간 지연 문제 (+ ntp 시간 동기화)](mdspace/linux2.md)
-- [Linux - Java 버전 관리](mdspace/linux3.md)
+- [Linux - Linux - Java 버전 관리 (+ alternatives(+ 심볼릭 링크), jenv)](mdspace/linux3.md)
 - [Container & Docker](mdspace/docker.md)
 - [Kubernates (vs Docker)](mdspace/kubernates.md)
 
