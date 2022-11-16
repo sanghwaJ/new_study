@@ -25,18 +25,20 @@ public class Solution52 {
             burger.add(ingre);
 
             if (burger.size() >= 4) {
-                startBread = burger.get(burger.size()-4);
-                vegi = burger.get(burger.size()-3);
-                gogi = burger.get(burger.size()-2);
                 endBread = burger.get(burger.size()-1);
+                if (endBread == 1) {
+                    startBread = burger.get(burger.size()-4);
+                    vegi = burger.get(burger.size()-3);
+                    gogi = burger.get(burger.size()-2);
 
-                if (startBread == 1 && vegi == 2 && gogi == 3 && endBread == 1) {
-                    burger.remove(burger.size()-1);
-                    burger.remove(burger.size()-1);
-                    burger.remove(burger.size()-1);
-                    burger.remove(burger.size()-1);
+                    if (startBread == 1 && vegi == 2 && gogi == 3) {
+                        burger.remove(burger.size()-1);
+                        burger.remove(burger.size()-1);
+                        burger.remove(burger.size()-1);
+                        burger.remove(burger.size()-1);
 
-                    answer += 1;
+                        answer += 1;
+                    }
                 }
             }
         }
