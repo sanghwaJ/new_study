@@ -3,12 +3,11 @@ import java.util.*;
 
 public class Solution51 {
     public static void main(String[] args) {
-        int[][] orderList = {{4, 3, 1, 2, 5}, {5, 4, 3, 2, 1}};
+        int[][] orderList = {{4, 3, 1, 2, 5, 6}, {5, 4, 3, 2, 1}};
         int[] answerList = {2, 5};
         
-        
         for (int i=0; i<orderList.length; i++) {
-            int answer = solution(orderList[i]);
+            int answer = solution1(orderList[i]);
             if (answerList[i] == answer) {
                 System.out.println("정답 => " + answer);   
             } else {
@@ -17,43 +16,71 @@ public class Solution51 {
         }
     }
 
-    public static int solution(int[] order) {
-        Queue<Integer> orderQueue = new LinkedList<>();
-        Stack<Integer> orderStack = new Stack<>();
-        
-        int answer = 0;
-        int targetIdx = 1;
-        int idx = 0;
-        while (true) {
-            orderQueue.offer(order[idx]);
+    public static int solution1(int[] order) {
+        Queue<Integer> beltQueue = new LinkedList<>();
+        Stack<Integer> subBeltStack = new Stack<>();
 
-            if (orderQueue.peek() == targetIdx) {
-                orderQueue.poll();
-                answer++;
-                targetIdx++;
+        for (int i=0; i<order.length; i++) {
+            beltQueue.offer(i+1);
+        }
+
+        int idx = 0;
+        while (!beltQueue.isEmpty()) {
+            if (order[idx] == beltQueue.peek()) {
                 idx++;
+                beltQueue.poll();
             } else {
-                orderStack.add(orderQueue.poll());
+                if (!subBeltStack.isEmpty() && subBeltStack.peek() == order[idx]) {
+                    idx++;
+                    subBeltStack.pop();
+                } else {
+                    subBeltStack.push(beltQueue.poll());
+                }
+            }
+        }
+
+        // subBelt 처리
+        while (!subBeltStack.isEmpty()) {
+            if (order[idx] == subBeltStack.peek()) {
                 idx++;
+                subBeltStack.pop();
+            } else {
+                break;
+            }
+        }
+
+        return idx;
+    }
+
+    // 다른 풀이
+    public static int solution2(int[] order) {
+        Stack<Integer> subBeltStack = new Stack<Integer>();
+        int idx = 0;
+        int targetNum = 1;
+        int answer = 0;
+        
+        while (true) {
+            if (!subBeltStack.isEmpty() && order[idx] == subBeltStack.peek()) {
+                subBeltStack.pop();
+                idx++;
+                answer++;
                 continue;
             }
 
-            if (orderStack.size() > 0) {
-                if (orderStack.peek() == targetIdx) {
-                    orderStack.pop();
-                    answer++;
-                    targetIdx++;
-                }
-
-                if (orderQueue.peek() == targetIdx && orderStack.peek() == targetIdx) {
-                    break;
-                }
+            if (targetNum > order.length) {
+                break;
             }
-
-            
+                
+            if (order[idx] == targetNum) {
+                idx++;
+                targetNum++;
+                answer++;
+            } else {
+                subBeltStack.push(targetNum);
+                targetNum++;
+            }
         }
 
         return answer;
-
     }
 }
