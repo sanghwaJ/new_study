@@ -50,6 +50,7 @@ public class Solution51 {
         }
 
         return idx;
+        
     }
 
     // 다른 풀이
