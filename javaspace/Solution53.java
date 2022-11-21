@@ -29,28 +29,28 @@ public class Solution53 {
         return answer.size();
     }
 
-    public static void dfs(LinkedHashSet<String> set, String[] user_id, String[] banned_id) {
-        if (set.size() == banned_id.length) {
-            if (banCheck(set, banned_id)) {
-                answer.add(new HashSet<>(set));
+    public static void dfs(LinkedHashSet<String> lhSet, String[] user_id, String[] banned_id) {
+        if (lhSet.size() == banned_id.length) {
+            if (banCheck(lhSet, banned_id)) {
+                answer.add(new HashSet<>(lhSet));
             }
             return;
         }
         
         for (int i=0; i<user_id.length; i++) {
-            if (!set.contains(user_id[i])) {
-                set.add(user_id[i]);
-                dfs(set, user_id, banned_id);
-                set.remove(user_id[i]);
+            if (!lhSet.contains(user_id[i])) {
+                lhSet.add(user_id[i]);
+                dfs(lhSet, user_id, banned_id);
+                lhSet.remove(user_id[i]);
             }
         }
     }
 
-    public static boolean banCheck(HashSet<String> set, String[] banned_id) {
+    public static boolean banCheck(HashSet<String> hSet, String[] banned_id) {
         int idx = 0;
         boolean check = true;
 
-        for (String userId : set) {
+        for (String userId : hSet) {
             String banId = banned_id[idx++];
 
             if (userId.length() != banId.length()) {
