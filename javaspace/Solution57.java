@@ -1,7 +1,7 @@
 // Codility - NailingPlanks
 import java.util.*;
 
-public class Solution54 {
+public class Solution57 {
     public static void main(String[] args) {
         int[] A = {1, 4, 5, 8};
         int[] B = {4, 5, 9, 10};
