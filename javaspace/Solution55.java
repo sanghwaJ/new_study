@@ -1,17 +1,17 @@
-// Codility - 
+// Codility - CountDiv
 import java.util.*;
 
 public class Solution55 {
     public static void main(String[] args) {
-        int[] A = {1, 4, 5, 8};
-        int[] B = {4, 5, 9, 10};
-        int[] C = {4, 6, 7, 10, 2};
+        int A = 6;
+        int B = 11;
+        int K = 2;
         
-        System.out.println(solution(A, B, C));
+        System.out.println(solution(A, B, K));
     }
 
-    public static int solution(int[] A, int[] B, int[] C) {
-        int answer = 0;
-        return answer;
+    public static int solution(int A, int B, int K) {
+
+        return 0;
     }
 }
