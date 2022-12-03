@@ -1,5 +1,6 @@
 // Codility - NailingPlanks
 import java.util.*;
+import java.math.*;
 
 public class Solution54 {
     public static void main(String[] args) {
