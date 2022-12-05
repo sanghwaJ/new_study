@@ -11,7 +11,20 @@ public class Solution55 {
     }
 
     public static int solution(int A, int B, int K) {
+        // Timeout
+        // int answer = 0;
+        // for (int i=A; i<B+1; i++) {
+        //     if (i % K == 0) {
+        //         for (int j=i; j<B+1; j+=K) {
+        //             answer++;
+        //         }
+        //         return answer;
+        //     }
+        // }
+        // return answer;
 
-        return 0;
+        if (A % K == 0) return B/K - A/K + 1;
+            
+        return B/K - A/K;
     }
 }
