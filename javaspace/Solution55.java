@@ -3,11 +3,9 @@ import java.util.*;
 
 public class Solution55 {
     public static void main(String[] args) {
-        int A = 6;
-        int B = 11;
-        int K = 2;
+        int N = 1030000230;
         
-        System.out.println(solution(A, B, K));
+        System.out.println(solution(N));
     }
 
     public static int solution(int A, int B, int K) {
