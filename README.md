@@ -145,6 +145,7 @@
 - [프로그래머스 - 햄버거 만들기](javaspace/Solution52.java)
 - [프로그래머스 - 불량 사용자](javaspace/Solution53.java)
 - [프로그래머스 - 단속카메라](javaspace/Solution56.java)
+- [프로그래머스 - 주식가격](javaspace/Solution57.java)
 - [BOJ - 1541 잃어버린 괄호](javaspace/Solution1.java)
 - [BOJ - 2480 주사위세개](javaspace/Solution6.java)
 - [BOJ - 2484 주사위네개](javaspace/Solution7.java)
