@@ -146,9 +146,6 @@
 - [프로그래머스 - 불량 사용자](javaspace/Solution53.java)
 - [프로그래머스 - 단속카메라](javaspace/Solution56.java)
 - [프로그래머스 - 주식가격](javaspace/Solution57.java)
-- [BOJ - 1541 잃어버린 괄호](javaspace/Solution1.java)
-- [BOJ - 2480 주사위세개](javaspace/Solution6.java)
-- [BOJ - 2484 주사위네개](javaspace/Solution7.java)
 - [Codility - BinaryGap](javaspace/Solution8.java)
 - [Codility - CyclicRotation](javaspace/Solution9.java)
 - [Codility - FrogJmp](javaspace/Solution10.java)
@@ -174,6 +171,9 @@
 - [Codility - EquiLeader](javaspace/Solution43.java)
 - [Codility - NailingPlanks](javaspace/Solution54.java)
 - [Codility - CountDiv](javaspace/Solution55.java)
+- [BOJ - 1541 잃어버린 괄호](javaspace/Solution1.java)
+- [BOJ - 2480 주사위세개](javaspace/Solution6.java)
+- [BOJ - 2484 주사위네개](javaspace/Solution7.java)
 
 ### 📌 Python
 - [프로그래머스 - 전화번호 목록](pythonspace/Solution1.py)
@@ -191,6 +191,9 @@
 - [프로그래머스 - 피보나치 수](pythonspace/Solution30.py)
 - [프로그래머스 - 2 x n 타일링](pythonspace/Solution31.py)
 - [프로그래머스 - 올바른 괄호](pythonspace/Solution32.py)
+- [Codility - OddOccurrencesInArray](pythonspace/Solution14.py)
+- [Codility - PermMissingElem](pythonspace/Solution15.py)
+- [Codility - TapeEquilibrium](pythonspace/Solution16.py)
 - [BOJ - 2480 주사위세개](pythonspace/Solution2.py)
 - [BOJ - 2484 주사위네개](pythonspace/Solution3.py)
 - [BOJ - 1260 DFS와 BFS](pythonspace/Solution22.py)
@@ -203,8 +206,5 @@
 - [Softeer - 8단 변속기](pythonspace/Solution9.py)
 - [Softeer - 장애물 인식 프로그램](pythonspace/Solution10.py)
 - [Softeer - 비밀메뉴](pythonspace/Solution11.py)
-- [Codility - OddOccurrencesInArray](pythonspace/Solution14.py)
-- [Codility - PermMissingElem](pythonspace/Solution15.py)
-- [Codility - TapeEquilibrium](pythonspace/Solution16.py)
 
 ---
