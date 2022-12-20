@@ -52,11 +52,13 @@
 - [Spring - ComponentScan & Autowired](mdspace/spring_componentScan.md)
 - [Spring - 의존 관계 주입](mdspace/spring_di.md)
 - [Spring - 빈 생명주기 콜백](mdspace/spring_beanLifecycle.md)
+- [Spring - 빈 스코프](mdspace/spring_beanScope.md)
 - [Spring - Spring Container & Spring Bean](mdspace/java_springContainerBean.md)
 - [Spring - Annotation (+ Lombok)](mdspace/spring_annotation.md)
 - [Spring - Transaction 사용 방법](mdspace/spring_transaction.md)
 
 ### 📌 Web
+- [IP & TCP & UDP](mdspace/ipAndTcpAndUdp.md)
 - [GET & POST, REST API](mdspace/restapiAndGetPost.md)
 - [Cookie & Session (+ Cache)](mdspace/cookieAndSession.md)
 - [WebSocket](mdspace/websocket.md)
