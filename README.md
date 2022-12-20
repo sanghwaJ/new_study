@@ -50,6 +50,8 @@
 - [Spring - IoC & DI & 컨테이너](mdspace/spring_iocAndDiAndContainer.md)
 - [Spring - 싱글톤 컨테이너](mdspace/spring_singleton.md)
 - [Spring - ComponentScan & Autowired](mdspace/spring_componentScan.md)
+- [Spring - 의존 관계 주입](mdspace/spring_di.md)
+- [Spring - 빈 생명주기 콜백](mdspace/spring_beanLifecycle.md)
 - [Spring - Spring Container & Spring Bean](mdspace/java_springContainerBean.md)
 - [Spring - Annotation (+ Lombok)](mdspace/spring_annotation.md)
 - [Spring - Transaction 사용 방법](mdspace/spring_transaction.md)
