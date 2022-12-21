@@ -59,6 +59,7 @@
 
 ### 📌 Web
 - [IP & TCP & UDP](mdspace/ipAndTcpAndUdp.md)
+- [URI & HTTP](mdspace/uriAndHttp.md)
 - [GET & POST, REST API](mdspace/restapiAndGetPost.md)
 - [Cookie & Session (+ Cache)](mdspace/cookieAndSession.md)
 - [WebSocket](mdspace/websocket.md)
