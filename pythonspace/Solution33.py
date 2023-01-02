@@ -24,6 +24,7 @@ times = [4, 2, 1]
 n = 2
 print(solution(times, n))
 
+
 '''
 t 0 / [[4, 0]]
 t 1 / [[3, 0], [2, 1]]
