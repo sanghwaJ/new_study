@@ -9,9 +9,6 @@
             "name": "Launch Solution55",
             "request": "launch",
             "mainClass": "Solution55",
-<<<<<<< HEAD
-            "projectName": "new_study_89d54c8"
-=======
             "projectName": "new_study_7c0543dd"
         },
         {
@@ -20,7 +17,6 @@
             "request": "launch",
             "mainClass": "Solution54",
             "projectName": "new_study_7c0543dd"
->>>>>>> f414636a1153b5a166e6d0b52286c054df1e77b1
         },
         {
             "type": "java",

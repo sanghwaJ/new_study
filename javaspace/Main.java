@@ -25,6 +25,5 @@ public class Main {
             System.out.print((Math.max(a, Math.max(b, c))*100));
         }
     }
-    
 }
 
