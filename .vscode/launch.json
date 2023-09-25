@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Solution10",
+            "request": "launch",
+            "mainClass": "Solution10",
+            "projectName": "new_study_7c0543dd"
+        },
+        {
+            "type": "java",
+            "name": "Launch Solution4",
+            "request": "launch",
+            "mainClass": "Solution4",
+            "projectName": "new_study_7c0543dd"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "Main",
+            "projectName": "new_study_7c0543dd"
+        },
+        {
+            "type": "java",
             "name": "Launch Solution55",
             "request": "launch",
             "mainClass": "Solution55",

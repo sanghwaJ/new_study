@@ -81,6 +81,7 @@
 - [JPA](mdspace/jpa1.md)
 - [JPA 관련 개념 정리 - JPA(+ JPQL), QueryDSL, Spring Data JPA, Hibernate, 지연로딩, 즉시로딩](mdspace/jpa2.md)
 - [JPA Annotation 정리](mdspace/jpa_annotation.md)
+- [DB 커넥션](mdspace/db_connection.md)
 
 ### 📌 JavaScript & HTML
 - [JavaScript - 실행 모델 (Event Loop, Call Stack, Run-to-completion, Callback Queue, Offloading)](mdspace/js_basic1.md)
