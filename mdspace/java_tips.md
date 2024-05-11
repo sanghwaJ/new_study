@@ -792,7 +792,7 @@ class Main {
         Queue<Integer> queue = new LinkedList<>();
         queue.offer(start);
 
-				System.out.println(array[start]);
+		System.out.println(array[start]);
         visit[start] = true;
 
         while(!queue.isEmpty()) {
@@ -844,7 +844,7 @@ class Main {
         Queue<Pos> queue = new LinkedList<>();
         queue.add(new Pos(x, y));
 				
-				System.out.println(array[x][y]);
+        System.out.println(array[x][y]);
         visit[x][y] = true;
 
         while(!queue.isEmpty()) {
