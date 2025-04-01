@@ -136,3 +136,6 @@ CorsConfigurationSource corsConfigurationSource() {
     ```
     - JavaConfig를 통해 paths, origins, methods, allowedHeaders, exposedHeaders, allowCredentials, maxAge 모두 설정할 수 있음
     
+### 출처
+- https://velog.io/@chullll/Spring-Security-CORS
+- https://ddonghyeo.tistory.com/56
